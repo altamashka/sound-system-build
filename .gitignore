@@ -1,0 +1,16 @@
+.DS_Store
+.obsidian/
+Backups/
+Archive/
+Exports/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+
+# Designer originals are preserved locally; the 134 MB Fusion file needs Git LFS.
+# Do not silently drop/rewrite designer files or pretend they are available in a cloud checkout.
+JMOD 2.0 DIY Package/
+SKRAM DIY Package/
+Solana 2.0 DIY Package/
