@@ -1,0 +1,21 @@
+# Normalise line endings so Mac, Windows, Obsidian, Claude and Codex edits
+# do not show up as whole-file changes.
+* text=auto eol=lf
+
+# CAD, measurement and document binaries: never diff or merge as text.
+# If designer originals are ever hosted, add Git LFS rules here
+# (e.g. `*.f3d filter=lfs diff=lfs merge=lfs -text`) after Ben decides.
+*.f3d binary
+*.skp binary
+*.step binary
+*.stp binary
+*.stl binary
+*.sldprt binary
+*.SLDPRT binary
+*.sldasm binary
+*.SLDASM binary
+*.mdat binary
+*.pdf binary
+*.xlsx binary
+*.png binary
+*.jpg binary
