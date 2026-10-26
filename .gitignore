@@ -14,3 +14,18 @@ __pycache__/
 JMOD 2.0 DIY Package/
 SKRAM DIY Package/
 Solana 2.0 DIY Package/
+
+# Guard against designer CAD originals copied outside the package folders.
+# The 134 MB JMOD Fusion file would also fail GitHub's 100 MB push limit.
+*.f3d
+*.skp
+*.sldprt
+*.SLDPRT
+*.sldasm
+*.SLDASM
+*.mdat
+
+# Personal tool state
+.claude/settings.local.json
+Thumbs.db
+~$*
