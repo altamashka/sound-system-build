@@ -8,18 +8,21 @@ Companion documents: [Sound Setup Guide](Sound%20Setup%20Guide.md) (measuring, a
 
 **Contents**
 
-- **A · Shared basics**: A1 reading the tags · A2 licences · A3 safety · A4 materials and sheet counts · A5 tools · A6 CNC workflow
-- **B · JMOD build (first)**: B1 at a glance · B2 what matters to the builder · B3 bill of materials · B4 cut list · B5 CAM review · B6 print the throat adapter · B7 parts prep · B8 dry fit · B9 assembly · B10 drivers, wiring, connectors · B11 pole mount · B12 finish · B13 test and acceptance · B14 time and build calendar · B15 open items
-- **C · SKRAM build**: C1 at a glance · C2 what matters to the builder · C3 bill of materials · C4 cut list and sheet nests · C5 CAM review · C6 before assembly · C7 assembly · C8 driver and wiring · C9 hatch, vents, handles, feet · C10 finish · C11 test and acceptance · C12 time · C13 open items
-- **D · Deployment and handover**: D1 JMOD stands and the sub cluster · D2 hand-over card · D3 transport and storage · D4 roles and schedule · D5 sources
+- [A · Shared basics](#a--shared-basics)
+- [B · JMOD build](#b--jmod-build)
+- [C · SKRAM build](#c--skram-build)
+- [D · Deployment and handover](#d--deployment-and-handover)
 
-**What changed from v1**
+<details>
+<summary>What changed from v1</summary>
 
 - The JMOD and SKRAM builds are separate parts with their own bill of materials, cut list, CAM review, assembly, wiring, test card and open items.
 - Facts read from the design files that v1 could not read: the stock sizes both CAMs assume, the SKRAM tool and cutting data, the differences between the three SKRAM CAM files, per-part sizes and hole schedules for both designs, the throat adapter's mounting pattern.
 - Resolved: the JMOD bolt count (**4 per cabinet, 8 for two**), the Speakon wiring pin assignment, the DCX464 and 12NDL88 specifications, the 21DS115 bolt circle, the SKRAM stock size.
 - Catches found in the files (details in B5, B6, C4, C5): the printed adapter is 120 mm in one direction against the guide's 110 mm; the SKRAM CAM assumes 1250 mm-wide boards and mirrors the sheet when it flips it; one SKRAM outline is cut full depth in one pass; the SKRAM nests waste about five sheets of plywood across four cabinets.
 - New: pole-mount design and stand checks for the JMODs (B11, D1), build calendars, expected meter readings, and the stage-by-stage route from poles to side stacks.
+
+</details>
 
 ## A · Shared basics
 
