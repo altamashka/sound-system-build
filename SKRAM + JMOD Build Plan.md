@@ -2,46 +2,50 @@ Working plan · 6 November 2026 · For collective review
 
 # SKRAM + JMOD build plan
 
-Start with **one JMOD**. Once we know what it costs and what the build involves, decide whether to build **one SKRAM** next. These are first steps toward the larger system, not a commitment to buy everything at once.
+We'll start with **one JMOD**, a speaker for the higher and middle parts of the music. Once we've built it, we'll know more about the cost and work involved. We can then decide whether to build **one SKRAM**, a bass speaker.
 
-The earlier working layout was a centre sub cluster with JMODs on poles, stereo tops and mono subs. The previous proposal planned two JMODs and four SKRAMs; the eventual quantity and timing can be revisited after the first builds.
+This is the start of a larger system. We don't need to buy everything or settle the final number of speakers now. The earlier plan was for two JMODs and four SKRAMs, with the bass speakers together in the middle and the JMODs on stands at either side.
 
-## What we need to agree now
+## Agree together first
 
-1. Who will coordinate the JMOD build, CAM, purchasing and assembly? One person can take more than one role.
-2. How much can we contribute for the first cabinet, and who owns it and the parts if someone leaves?
-3. Where can we store the sheets, work in progress and finished cabinet? How will we move it?
-4. Who can open and review the JMOD Fusion CAM, and who will learn alongside them?
+1. Who will organise the build, check the machine-cutting files, buy materials and help assemble the cabinet? People can take more than one role.
+2. How much can each person contribute? Who owns the cabinet and parts if someone leaves?
+3. Where can we store the wood, the unfinished work and the finished cabinet? How will we move it?
+4. Who can review the cutting files in Fusion, the design software, and who wants to learn alongside them?
 
-Leave the amplifier purchase, final system size and event layout for later. The first cabinet can be built before those decisions, but it cannot be safely played until the amplification, DSP, wiring and protection have been worked out.
+We can choose the amplifiers and the final event layout later. **Don't play the speaker until its wiring, amplifiers and protective settings have been checked.**
 
-## First: one JMOD
+## First: build one JMOD
 
-1. **Get the files and make a cost list.** Obtain the designer package locally and use [Build Guide B3](Build%20Guide.md#b3-bill-of-materials) to price one cabinet's parts. Its table is for **two** cabinets, so adjust driver and hardware quantities carefully. Check the actual cutting nest before assuming the sheet requirement or halving the wood cost.
-2. **Check the workshop route.** Confirm access, induction, machine and storage fees, CNC capacity, available tooling and space for glue-up at Alt Makers. Assign someone to review the CAM; the workshop is a shared facility, not an assumed design or commissioning service.
-3. **Review the CNC job.** JMOD has shaped 3D parts and flipped operations. Check the router's post-processor, stock, measured thickness, workholding, registration and tools; simulate the setups and make a test cut before committing sheets. The previous file review did **not** simulate or cut the job. See [Build Guide B5](Build%20Guide.md#b5-cam-review).
-4. **Confirm the material and cost.** Use the JMOD's specified uncoated birch plywood, not the kitchen's oak. Check the core, glue, stock and VAT with the supplier. The [wood review](Wood%20sourcing%20review.md) records prices from 23 October; they are not quotes.
-5. **Build the cabinet.** Print the throat adapter, cut and label parts, dry-fit, assemble, finish and install the drivers and wiring. Follow [Build Guide B](Build%20Guide.md#b--jmod-build), including its checks and open items.
-6. **Review together.** Record actual spending, time, offcuts and problems. Decide whether to make the second JMOD now or move on to the first SKRAM.
+1. **Get the designer's files and price the parts.** Use [Build Guide B3](Build%20Guide.md#b3-bill-of-materials) to make a list for one cabinet. That table is for **two**, so check quantities carefully. The cutting layout may use sheets for both cabinets: check it before estimating how much wood one needs.
+2. **Check the workshop.** At Alt Makers, confirm access and training, machine and storage costs, the cutting machine's capacity and tools, and space to assemble the cabinet. Choose someone to check the cutting files. Alt Makers is a shared workshop; don't assume staff will design or commission the system.
+3. **Check the cutting files.** The JMOD has curved parts and some sheets must be turned over during cutting. The person preparing the files needs to check that the machine can run them, including the tools, wood thickness, how the sheet is held and how it lines up after turning. Run the software's cutting preview and make a test cut before cutting the full sheets. The earlier review read the files but did **not** run a cutting preview or make a cut. See [Build Guide B5](Build%20Guide.md#b5-cam-review).
+4. **Confirm the wood and price.** The cabinet needs uncoated birch plywood. Check the wood throughout the sheet, the glue, availability and whether the price includes VAT. The [wood review](Wood%20sourcing%20review.md) has prices from 23 October; they are not quotes.
+5. **Build it.** Print the adapter that connects the high-frequency speaker to the cabinet. Cut and label the wood, check that everything fits before gluing, then assemble, finish and fit the speaker parts and wiring. Follow [Build Guide B](Build%20Guide.md#b--jmod-build).
+6. **Review together.** Record the cost, time, leftover wood and any problems. Decide whether to make a second JMOD or move on to the first SKRAM.
 
-The previous parts plan used two B&C 12NDL88 woofers, one 16 Ω DCX464 and one matching 16 Ω FB464 per JMOD. That bi-amp route remains the working assumption; check availability, compatibility and the chosen amplifier/DSP before ordering. The published active mid/high settings need measurement and adjustment with the passive crossover.
+The existing parts plan specifies two B&C 12NDL88 speaker units, one 16-ohm DCX464 and one matching 16-ohm FB464 crossover for each JMOD. The crossover divides sound between parts of the speaker. Check availability and compatibility with the planned amplifiers and sound processor before ordering. The published sound settings need measuring and adjustment when using this crossover.
 
 ## Then: consider one SKRAM
 
-If the group wants to proceed, price and plan **one** cabinet using [Build Guide C](Build%20Guide.md#c--skram-build). The prior working driver choice was the B&C 21DS115; confirm impedance against the amplifier plan before buying. The supplied one-cabinet nest uses three 18 mm and one 12 mm sheets, 2500 × 1250 mm; validate any re-nesting before relying on savings.
+If the group wants to proceed, price one cabinet using [Build Guide C](Build%20Guide.md#c--skram-build). The previous choice was a B&C 21DS115 speaker unit; check that its electrical rating matches the amplifier plan before buying.
 
-Before cutting, review measured sheet thickness, the metric dimensions, flip registration, cutter suitability and cutting depths in [Build Guide C5](Build%20Guide.md#c5-cam-review). The prior CAM review was a reading of the files, not a machine simulation or test cut. Plan handling and storage: the finished cabinet is estimated at about 70 kg.
+The supplied cutting layout for one cabinet uses three 18 mm sheets and one 12 mm sheet, each 2500 × 1250 mm. Check any changed cutting layout before counting on wood savings. Before cutting, check the measured wood thickness, dimensions, alignment when turning sheets over, cutter and cutting depths as described in [Build Guide C5](Build%20Guide.md#c5-cam-review). The earlier file review did not include a cutting preview or test cut.
 
-## Before playing either cabinet
+The finished SKRAM is estimated to weigh about 70 kg. Plan how to lift, move and store it.
 
-Choose amplification and DSP that suit the actual drivers and wiring. Have someone competent check the signal path, protection and measurement procedure with the group; do not treat a calculated limiter value as a verified safe setting. Use the [Sound Setup Guide](Sound%20Setup%20Guide.md) and the equipment manuals. One JMOD and one SKRAM are an early build stage, not a commissioned event system.
+## Before playing either speaker
+
+Choose amplifiers and a sound processor that suit the speaker parts and wiring. The processor controls how sound is divided and helps protect the speakers from excessive signals. Have someone with the right experience check the wiring, settings and measurement process with the group. A calculated protection setting is not proof that it is safe.
+
+Use the [Sound Setup Guide](Sound%20Setup%20Guide.md) and the equipment manuals. One JMOD and one SKRAM are an early build stage; they still need checking and setup before use at an event.
 
 ## References
 
-- [Build Guide](Build%20Guide.md) — materials, fabrication and wiring.
-- [Wood sourcing review](Wood%20sourcing%20review.md) — dated prices and open material checks.
-- [Sound Setup Guide](Sound%20Setup%20Guide.md) — DSP, measurement and operation.
-- [Earlier full-system proposal](Notes/2026-10-23%20full-system%20proposal.md) — historical options, calculations and sources; prices and schedules need refreshing.
+- [Build Guide](Build%20Guide.md) — materials, cutting, assembly and wiring.
+- [Wood sourcing review](Wood%20sourcing%20review.md) — dated prices and material checks.
+- [Sound Setup Guide](Sound%20Setup%20Guide.md) — setting up and checking the sound system.
+- [Earlier full-system proposal](Notes/2026-10-23%20full-system%20proposal.md) — older research and sources; prices and schedules need updating.
 - [Workshop context](context/workshop.md) — shared workshop information.
 
-The designer packages are not in this GitHub checkout. Obtain the originals before relying on package-relative drawings or CAM. SKRAM is by Josh Ricci; JMOD is by John White / JW Sound. See the Build Guide for licence details.
+The designers' files are not in this GitHub checkout. Obtain the originals before using their drawings or cutting files. SKRAM is by Josh Ricci; JMOD is by John White / JW Sound. See the Build Guide for licence details.
