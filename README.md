@@ -1,22 +1,22 @@
 # Sound system build
 
-Start with the [SKRAM + JMOD Build Plan](SKRAM%20%2B%20JMOD%20Build%20Plan.md). The current proposal is reviewed with the collective; it is not blanket authorisation to order or build every option.
+A shared plan for building JMOD tops and SKRAM subs at Alt Makers in Berlin. The documents are for collective review; they are not approval to buy or build every option.
 
-| Document | Purpose |
-|---|---|
-| [Build plan](SKRAM%20%2B%20JMOD%20Build%20Plan.md) | System scope, phasing, costs, decisions and open checks |
-| [Wood sourcing review](Wood%20sourcing%20review.md) | Dated material evidence, quantities and procurement limits |
-| [Build Guide](Build%20Guide.md) | Fabrication/assembly/wiring sequence and checks |
-| [Sound Setup Guide](Sound%20Setup%20Guide.md) | DSP, measuring, alignment, limiting and operation |
-| [Workshop context](context/workshop.md) | Dated shared makerspace context for this checkout |
-| [JMOD plywood on Possling sheets](Notes/JMOD%20plywood%20-%20Possling%20sheets.md) | Dated 12 Oct 2026 working note on cutting the JMOD nests from larger Possling stock; the sourcing review is newer |
+## Find what you need
 
-## Original designer packages
+- [Build plan](SKRAM%20%2B%20JMOD%20Build%20Plan.md) — system, budget, schedule and decisions.
+- [Wood sourcing review](Wood%20sourcing%20review.md) — dated prices, sheet quantities and outstanding material checks.
+- [Build Guide](Build%20Guide.md) — cutting, assembly, wiring and checks.
+- [Sound Setup Guide](Sound%20Setup%20Guide.md) — DSP, measurement, alignment and operation.
+- [Workshop context](context/workshop.md) — shared makerspace information.
+- [JMOD plywood working note](Notes/JMOD%20plywood%20-%20Possling%20sheets.md) — 12 October 2026; the sourcing review is newer.
 
-`JMOD 2.0 DIY Package/`, `SKRAM DIY Package/` and `Solana 2.0 DIY Package/` are preserved in the **local** project but excluded from the initial GitHub repo. The JMOD Fusion file alone is about 134 MB, above ordinary GitHub file limits; Git LFS is not installed. Do not claim a remote AI session has inspected files that are not in its checkout. The authored documents' package-relative CAD/PDF links therefore require the local originals.
+## Designer files
 
-A later explicit asset setup can use Git LFS after reviewing the package-sharing terms and choosing which originals should be hosted. No designer file was deleted or converted. This setup does not revalidate CAD/CAM, cabinet geometry, presets, electrical safety or speaker prices. Use the evidence/confidence notes in the build plan and obtain the actual files before machining.
+The JMOD, SKRAM and Solana designer packages are excluded from this GitHub repository. Links to their CAD files and PDFs work only where the originals are available locally. Obtain the actual files and check the CAM before machining; the guides do not replace a simulation or a test cut.
 
-Open this folder alone in Obsidian, or use the parent Projects vault. Markdown changes appear in GitHub only after commit/push. Keep separate repos for this build and the kitchen furniture; birch cabinet specifications are not interchangeable with solid oak furniture.
+The JMOD Fusion file is about 134 MB. Any future hosting of designer originals needs a separate decision about file storage and sharing terms. Keep this project's birch specifications separate from the kitchen project's oak.
 
-Changes go through a branch and pull request into `main`, whether made by hand, Claude or Codex. See the Git workflow section in [AGENTS.md](AGENTS.md).
+## Working on the documents
+
+Use a branch and pull request into `main`. See [AGENTS.md](AGENTS.md) for the project rules and Git workflow. The workshop context is generated from the shared source; do not edit the snapshot by hand.

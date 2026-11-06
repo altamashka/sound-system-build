@@ -6,7 +6,8 @@ How to measure, align, limit and operate the SKRAM + JMOD rig. Written for peopl
 
 Read §0 and §1 before the meeting. §2 is the buyer's checklist for the processor and amps. The rest is the procedure you follow once the cabinets exist. The cabinets themselves are built from the [Build Guide](Build%20Guide.md); the budget and decisions are in the [SKRAM + JMOD Build Plan](SKRAM%20+%20JMOD%20Build%20Plan.md).
 
-**What changed in v2 (11 Oct 2026)**
+<details>
+<summary>What changed in v2 (11 Oct 2026)</summary>
 
 - **Two JMOD settings were wrong in v1, and the printed guide is the cause.** I opened the REW file that ships with the JMOD package and read the filter sets it stores. The mid-band boost is at **640 Hz, not 540 Hz**, and the high band has **two** boosts, **6,000 Hz +5.0 dB Q5.0 and 8,000 Hz +2.5 dB Q2.5**, not the single "6000Hz +2.5dB Q?" in the guide, whose Q is cut off. Rebuilding the filters and comparing them with the file's own EQ'd traces confirms it (§6.2). This closes the "missing Q" open item and corrects it.
 - **Shared-channel (FB464) limiter values are now derived, not guessed** (§6.1, §7.2 example 5), using B&C's official DCX464 ratings.
@@ -15,9 +16,32 @@ Read §0 and §1 before the meeting. §2 is the buyer's checklist for the proces
 - **Arrangement C is now the baseline**: sub cluster in the centre, JMODs on poles left and right (§9.7, §10.3, §14.1).
 - The NL8 tri-amp pin assignment is confirmed from the wiring diagram (§1).
 
-[**0** Orientation](#s0) [**1** How the system works](#s1) [**2** What the sound side needs from the purchase](#s2) [**3** Concepts](#s3) [**4** Kit](#s4) [**5** Before power](#s5) [**6** Build the processor template](#s6) [**7** Gain structure and limiters](#s7) [**8** Measuring a cabinet](#s8) [**9** Aligning subs to tops](#s9) [**10** Stereo and mono](#s10) [**11** Verifying limiters](#s11) [**12** Tuning in a venue](#s12) [**13** Document, back up, lock](#s13) [**14** Event day](#s14) [**15** Troubleshooting](#s15) [**A** Worksheets](#sa) [**B** Quick maths](#sb) [**C** Glossary](#sc) [**D** Sources and open checks](#sd)
+</details>
 
-## 0Orientation
+**Contents**
+
+- [0 Orientation](#0-orientation)
+- [1 How the system works](#1-how-the-system-works)
+- [2 What the sound side needs from the purchase](#2-what-the-sound-side-needs-from-the-purchase)
+- [3 Concepts](#3-concepts)
+- [4 Kit](#4-kit)
+- [5 Before power](#5-before-power)
+- [6 Build the processor template](#6-build-the-processor-template)
+- [7 Gain structure and limiters](#7-gain-structure-and-limiters)
+- [8 Measuring a cabinet](#8-measuring-a-cabinet)
+- [9 Aligning subs to tops](#9-aligning-subs-to-tops)
+- [10 Stereo and mono](#10-stereo-and-mono)
+- [11 Verifying limiters](#11-verifying-limiters)
+- [12 Tuning in a venue](#12-tuning-in-a-venue)
+- [13 Document, back up, lock](#13-document-back-up-lock)
+- [14 Event day](#14-event-day)
+- [15 Troubleshooting](#15-troubleshooting)
+- [A Worksheets](#a-worksheets)
+- [B Quick maths](#b-quick-maths)
+- [C Glossary](#c-glossary)
+- [D Sources and open checks](#d-sources-and-open-checks)
+
+## 0 Orientation
 
 ### What this guide is, and is not
 
@@ -59,7 +83,7 @@ Expect the first full pass to take most of two days with two people (my estimate
 - **People.** Agree a "stop" word before you start. The person at the laptop is usually not the person next to the cabinet.
 - **Lifting and stacks.** See the build guide and §8 of the plan. Never work under a stack.
 
-## 1How the system works
+## 1 How the system works
 
 ### Passive cabinets, active signal chain
 
@@ -84,7 +108,7 @@ The processor may be an outboard unit or built into the amplifiers. This guide a
 | Cable and connectors | Delivers voltage to the right driver | Pinout, polarity, gauge |
 | Cabinets | Turn voltage into sound | Nothing; they are the thing being protected and measured |
 
-### Channels per stack
+### C hannels per stack
 
 The working layout is **Arrangement C**: the SKRAMs together in a centre cluster and a JMOD on a pole on each side (§10.3). "Stack" in this guide therefore means one side: one JMOD with its two amplifier channels, plus its share of the sub cluster. The plan allows two wiring routes for the JMOD coax. The bi-amp route uses a passive crossover (the B&C FB464) and is the working assumption.
 
@@ -101,7 +125,7 @@ The working layout is **Arrangement C**: the SKRAMs together in a centre cluster
 
 **Stereo.** The left stack and the right stack are identical and have their own amplifier channels. Whether they receive left and right, or the same signal, is a routing choice made in the processor, not a hardware difference.
 
-## 2What the sound side needs from the purchase
+## 2 What the sound side needs from the purchase
 
 For the meeting. These are the capabilities the procedures in this guide rely on. If a candidate processor or amplifier lacks one, either decline it or plan a workaround.
 
@@ -135,7 +159,7 @@ For the meeting. These are the capabilities the procedures in this guide rely on
 
 Conclusions that change the shopping list: (1) a Powersoft is only worth its price here if it is a **DSP variant**; (2) if the Crown XTi is chosen, plan the JMOD LF channel's low-pass as a biquad approximation of LR2 and the RMS protection as a procedure plus a conservative peak limit; (3) the cheap outboard route is the DriveRack, which has the filters and a peak limiter but not a documented RMS limiter. In every case the limiter must be **bench-checked** with the amp (§7.3, §11). Check the feature list against the table above before buying, not after.
 
-### Amplifiers
+### A mplifiers
 
 | Requirement | Why | Notes |
 | --- | --- | --- |
@@ -151,11 +175,11 @@ Conclusions that change the shopping list: (1) a Powersoft is only worth its pri
 1. **Amps with built-in DSP, or an outboard processor.** With built-in DSP, §6 and §7 happen in each amp's own software, usually with limiters that already know the amp's gain. With an outboard processor, you enter the gain yourself and everything depends on that number being right.
 2. **One sub per channel, or two.** Two per channel halves the number of channels and limiter sets, but a limiter event affects both subs, and the limiter ceiling must be chosen for the pair.
 
-## 3Concepts
+## 3 Concepts
 
 Each subsection is short. Skip anything you already know cold.
 
-### 3.1 Levels, units and headroom
+### 3 .1 Levels, units and headroom
 
 - **dBu** is a voltage level referenced to 0.775 V RMS. **dBV** is referenced to 1 V RMS. **dBFS** is a digital level referenced to the largest value the converter can represent. **dB SPL** is a sound pressure level referenced to the threshold of hearing.
 - Conversions: dBu = 20·log₁₀(V / 0.775). So 0 dBu = 0.775 V, +4 dBu = 1.23 V, +20 dBu = 7.75 V.
@@ -163,13 +187,13 @@ Each subsection is short. Skip anything you already know cold.
 - **Headroom** is the distance in dB between your normal level and the point where something clips. Music has peaks well above its average level. The ratio between peak and RMS is the **crest factor**: a sine wave has 3 dB, the pink noise used in speaker-rating tests has 6 dB, and real dance music often has 12 dB or more before mastering compression.
 - A voltage ratio of 2:1 is 6 dB, and power goes as voltage squared, so +6 dB is four times the power, +3 dB twice the power.
 
-### 3.2 What a speaker's power rating means
+### 3 .2 What a speaker's power rating means
 
 B&C (the maker of our drivers) defines its figures as follows. **Nominal power handling** follows the AES2-1984 method: pink noise with a 6 dB crest factor, filtered to the driver's working band, applied for two hours, with the driver still working normally afterwards. **Continuous program power** is twice the nominal rating, and B&C recommends choosing an amplifier rated at the program figure so the amp does not clip. A 6 dB crest factor means the peaks are 2:1 in voltage, so four times the average power.
 
 Two cautions. First, "AES" figures are an average power over hours, not a peak. Second, the method was revised in 2012 with a 12 dB crest factor, so figures from different brands and years are not strictly comparable. For our drivers we use B&C's published nominal and program figures.
 
-### 3.3 Crossovers
+### 3 .3 Crossovers
 
 A crossover splits the signal into bands, one per driver or cabinet. Two decisions define it: the **frequency** where the bands meet, and the **slope** at which each band rolls off.
 
@@ -179,7 +203,7 @@ A crossover splits the signal into bands, one per driver or cabinet. Two decisio
 - **Electrical is not acoustic.** A driver and its enclosure add their own rolloff and phase shift. The filter you set in the processor is not the filter you hear. That is why the JMOD guide publishes *acoustic target curves* and a set of electrical filters that happen to produce them, and says explicitly that results depend on drivers, amps, DSP and assembly. The job is to shape the electrical filters until the *measurement* matches the target.
 - **FIR and IIR.** IIR filters (the usual kind) are cheap and have latency near zero but change phase. FIR filters can correct phase but add latency. For a first system, IIR is fine and simpler to reason about.
 
-### 3.4 Delay, polarity and alignment
+### 3 .4 Delay, polarity and alignment
 
 These four words get confused. Keep them separate.
 
@@ -206,13 +230,13 @@ So alignment to within about a millisecond is plenty at 80 Hz.
 
 **Speed of sound.** About 343 m/s at 20 °C, and it changes by about 0.6 m/s per degree: c ≈ 331.3 + 0.606·T(°C). So 1 ms is about 0.34 m of path. Temperature only matters when the delays you are setting span tens of metres; a sub-to-top offset of a metre or two is unaffected by a 20 °C swing.
 
-### 3.5 Equalisation
+### 3 .5 Equalisation
 
 - **Parametric EQ (PEQ)**: centre frequency, gain, and Q (narrow or wide). **Shelf**: raises or lowers everything above or below a corner. **High-pass and low-pass** filters are also EQ.
 - Two kinds of EQ happen in this rig. **Voicing EQ** is part of the cabinet's tuning, such as the published JMOD PEQs, and is set once per cabinet. **System EQ** corrects how the cabinets work together and with a space, and is set per venue and kept small.
 - Keep corrections gentle. Cuts are safer than boosts. Do not boost a narrow dip, because a dip caused by cancellation cannot be filled with more level. Compare with and without the EQ often, to avoid fixing something that is not there.
 
-### 3.6 Limiters and why drivers fail
+### 3 .6 Limiters and why drivers fail
 
 Drivers fail in two ways.
 
@@ -242,7 +266,7 @@ A **limiter** has a hard ceiling it never exceeds. A **compressor** gradually re
 
 **Checked against B&C's own pages (11 Oct 2026).** The DCX464 16 Ω is rated **110 W nominal / 220 W continuous program** for the mid section and **80 W / 160 W** for the HF section; the 12NDL88 is 700 W nominal / 1400 W continuous program. JW's voltages reproduce these exactly: √(110 × 16) = 42.0 V and √(220 × 16) = 59.3 V (his 42 V and 59 V); √(80 × 16) = 35.8 V and √(160 × 16) = 50.6 V (his 35 V and 50 V). So the rule above is how he set them, and the DCX464 figures that v1 took from retail copy are confirmed. For the **8 Ω** DCX464 the same ratings give √(P × 8): 29.7 V / 42.0 V (mid) and 25.3 V / 35.8 V (HF).
 
-### 3.7 Gain structure
+### 3 .7 Gain structure
 
 Gain structure is how the level is shared across the mixer, processor, amp and speaker so that no stage clips early and none adds avoidable noise.
 
@@ -251,7 +275,7 @@ Gain structure is how the level is shared across the mixer, processor, amp and s
 - **Noise.** Hiss comes mainly from high amp gain and from converters. Use no more gain than needed: set the processor output to drive the amp to its clip point at the limiter threshold, and no further. On very sensitive horns, any extra gain is audible as hiss between tracks.
 - **Fixed-gain versus sensitivity amps.** Some amps state voltage gain in dB (26 dB is ×20, 32 dB is ×40). Others state the input voltage for full power. §7 shows how to convert either.
 
-### 3.8 Measurement basics
+### 3 .8 Measurement basics
 
 - **A measurement mic** converts sound to a signal and is calibrated, so levels are in true dB SPL. Ours is an individually calibrated USB mic with two calibration files: the 0° file for a mic pointing at the speaker, and the 90° file for a mic pointing up. For subwoofers the choice barely matters.
 - **A sweep** is a gliding tone. The software divides what it hears by what it played, and gets the speaker's *impulse response*, from which magnitude, phase and delay follow. Sweeps give a clean result with a good signal-to-noise ratio. **Pink noise** is a steady hiss with equal energy per octave, used to set levels and to listen.
@@ -261,7 +285,7 @@ Gain structure is how the level is shared across the mixer, processor, amp and s
 - **Why 10° off axis.** JW's guide says his measurements were taken at 10° off axis horizontally, ground plane, at 2 m. The guide does not say why. A plausible reason is that a multiple-entry horn can have an on-axis anomaly that listeners do not experience. We follow the same convention so our curves can be compared with his.
 - **Timing reference.** For two measurements to share a timeline, the software needs a reference. A USB mic cannot loop its output back, so the REW program offers an *acoustic timing reference*: it plays a short high-frequency chirp from a speaker with a tweeter before each sweep and uses that to synchronise. It cannot use a sub as the reference, and it does not allow multiple sweeps. §9 shows the workflow.
 
-## 4Kit
+## 4 Kit
 
 | Item | Requirement | Examples | Status |
 | --- | --- | --- | --- |
@@ -281,11 +305,11 @@ Gain structure is how the level is shared across the mixer, processor, amp and s
 | Clamp-on current meter | Mains draw per amp | | Useful |
 | Cable labels and tape | Everything labelled | | Required |
 
-## 5Before power
+## 5 Before power
 
 Do every step with the speakers either disconnected from amplifiers or the amplifiers off.
 
-### 5.1 Cabinet and cable checks
+### 5 .1 Cabinet and cable checks
 
 - [ ] Every cabinet has an ID label. Every cable has a label at both ends.
 - [ ] **Pinout continuity** on each cable and each cabinet connector. For the JMOD bi-amp route: pins 1± reach the woofer pair, pins 2± reach the FB464 input.
@@ -294,17 +318,17 @@ Do every step with the speakers either disconnected from amplifiers or the ampli
 - [ ] For the FB464: confirm its impedance version (8 Ω or 16 Ω) matches the DCX464 version fitted.
 - [ ] Speaker cable length and gauge. For a 4 Ω load, keep round-trip cable resistance under about 5% of the load, which is 0.2 Ω. Copper in 2.5 mm² cable is about 14 mΩ per metre round trip, so 2.5 mm² is good to about 14 m. 4 mm² is good to about 23 m. 1.5 mm² only to about 9 m. [Calculated from copper's resistivity]
 
-### 5.2 Test the signal path with no amps
+### 5 .2 Test the signal path with no amps
 
 - [ ] Source to processor: confirm left and right arrive at the right inputs, at a sensible level.
 - [ ] Processor to each amplifier input: confirm each output reaches the intended channel (use the processor's per-output meters and a tone).
 - [ ] Label each amp channel with the speaker it will drive.
 
-## 6Build the processor template
+## 6 Build the processor template
 
 Do this at a desk, with nothing connected to speakers, and save it before touching a cabinet. Name every output clearly: L-SUB, L-LF, L-COAX, R-SUB, R-LF, R-COAX.
 
-### 6.1 JMOD, bi-amp route (FB464)
+### 6 .1 JMOD, bi-amp route (FB464)
 
 These values begin from the designer's tri-amp settings, because the guide publishes no bi-amp preset. Expect to re-measure and adjust.
 
@@ -338,7 +362,7 @@ These values begin from the designer's tri-amp settings, because the guide publi
 
 So the v1 guess (JW's HF values) was safe but needlessly strict on the mid: the derivation supports raising to 42 V RMS and 59 V peak after measuring, not before. For the **8 Ω** DCX464 scale by √(8 / 16): start RMS 25 V and peak 36 V, ceilings 30 V and 42 V. A broadband limiter cannot see an HF-heavy fault (feedback, a bright test tone, a harsh sweep) because the voltage it sees is mostly mid; keep HF test signals off this channel. The standard FB464 adds series filament bulbs as protection; B&C publishes no power rating for it and does not say when the bulbs act. The **FB464V2** has higher-power inductors and no bulbs, so with it the DSP limiter is the only protection: keep the start values until measured. [Datasheet, Calculated]
 
-### 6.2 JMOD, tri-amp route
+### 6 .2 JMOD, tri-amp route
 
 | Output | Filters | Gain | Delay | Other |
 | --- | --- | --- | --- | --- |
@@ -360,7 +384,7 @@ So the v1 guess (JW's HF values) was safe but needlessly strict on the mid: the 
 
 A correct filter set leaves a flat constant offset; only the .mdat values do. So the printed page has a transposition (540 for 640) and a garbled high-band entry (the Q is missing and the 8 kHz filter is absent). **What this does and does not prove:** it proves the file's published XO+EQ traces were generated with the .mdat values. It does not prove the filters in JW's own hardware preset, so confirm with a measurement of your own build and ask JW (john@jwsound.live) to confirm and issue an erratum. The mid PEQ 2 Q is 1.85 in the file (1.8 on the page, a rounding). [Calculated from Published]
 
-### 6.3 SKRAM subs
+### 6 .3 SKRAM subs
 
 | Item | Value | Tag |
 | --- | --- | --- |
@@ -388,7 +412,7 @@ Owners therefore run corners from about 23 to 31 Hz with all vents open. **27 Hz
 2. **Distortion against level.** Measure a stepped sine at the corner frequency and about 10 Hz above it, raising the level in 3 dB steps. A steep rise in distortion marks where the cone is running out of room; set the limiter below that.
 3. **Look at the cone.** With the hatch off, sweep a low-level sine (1–2 W) down from 40 Hz to 15 Hz and watch for the frequency where the excursion starts to grow quickly. The hatch off changes the loading, so treat it as a coarse check only.
 
-### 6.4 Signal routing for stereo and mono
+### 6 .4 Signal routing for stereo and mono
 
 For stereo tops with mono subs (the recommended default; see §10):
 
@@ -397,9 +421,9 @@ For stereo tops with mono subs (the recommended default; see §10):
 - Whatever you choose, set the final sub level by measurement in §9 using the same mono signal, because that is what fixes the sub-to-top balance.
 - In Arrangement C each JMOD stands beside the cluster, not on it, so each side needs its own top delay on top of the sub-to-top alignment (§9.7).
 
-## 7Gain structure and limiters
+## 7 Gain structure and limiters
 
-### 7.1 Convert ratings into limiter voltages
+### 7 .1 Convert ratings into limiter voltages
 
 For each driver or driver group:
 
@@ -413,7 +437,7 @@ For each driver or driver group:
    - If the processor shows dBFS, add the converter's "0 dBFS = +X dBu" to relate them.
 6. **Bridging** an amplifier doubles its output voltage (+6 dB). Do not bridge without recomputing.
 
-### 7.2 Worked examples
+### 7 .2 Worked examples
 
 The amplifier numbers here are made-up examples. Use your own.
 
@@ -427,7 +451,7 @@ The amplifier numbers here are made-up examples. Use your own.
 
 **Example 5 · The shared coax channel (FB464) with the 16 Ω DCX464.** B&C's ratings are 110 W nominal / 220 W program (mid) and 80 W / 160 W (HF). At 16 Ω the section limits are mid 42.0 V RMS / 59.3 V peak and HF 35.8 V RMS / 50.6 V peak. One voltage feeds both sections, so take the lower RMS figure as the start (35 V) and the HF program figure as the peak start (50 V), and raise toward 42 V and 59 V only after measuring (§6.1). With an amplifier of voltage gain 32 dB (×39.8): processor output for 35 V RMS = 35 ÷ 39.8 = 0.88 V = +1.1 dBu; for 50 V peak = 1.26 V = +4.2 dBu. Power at the start values: 35² ÷ 16 = 77 W and 50² ÷ 16 = 156 W, far below any amplifier ceiling, so here the **driver sets the limit**, not the amp.
 
-### 7.3 Measure the amplifier's real output
+### 7 .3 Measure the amplifier's real output
 
 Calculated ceilings assume the amplifier delivers what its datasheet says. Verify on the bench. The following follows a method used by a loudspeaker manufacturer for calibrating a processor's limiters against an amplifier.
 
@@ -441,7 +465,7 @@ Calculated ceilings assume the amplifier delivers what its datasheet says. Verif
 
 Keep a meter on hand during the first loud test with speakers connected. If the voltage ever exceeds the thresholds you calculated, stop and find out why.
 
-### 7.4 Set the amplifier gain
+### 7 .4 Set the amplifier gain
 
 1. With speakers still disconnected, feed a test tone from the source at the highest level you want the system to reach. Use the mixer's nominal "0" level, not its maximum.
 2. Raise the processor output until the limiter thresholds are reached or the amp is at its clip point, whichever comes first.
@@ -449,17 +473,17 @@ Keep a meter on hand during the first loud test with speakers connected. If the 
 4. Set all channels of the same amp model to the same gain, so that the same processor level gives the same output on each.
 5. Write down the final gain setting. Cover or tape the controls afterwards.
 
-### 7.5 Noise-floor check
+### 7 .5 Noise-floor check
 
 With the speakers connected, the source muted and the system running, stand about a metre in front of each JMOD and listen. Note any hiss, hum or fan noise on each band. Do this at the end of every setup, not just the first one. If hiss is audible, the usual causes are too much amplifier gain or an amp with a noisy channel. The JMOD guide recommends the 16 Ω DCX464 for a lower noise floor.
 
-## 8Measuring a cabinet
+## 8 Measuring a cabinet
 
-### 8.1 Where and when
+### 8 .1 Where and when
 
 Outdoors on a hard, flat surface (concrete or asphalt) with nothing large within 10 m, on a calm, quiet day. Wind ruins high-frequency measurements and rain stops everything. A large, empty hall with a hard floor also works. If you must measure indoors, use a very short time window and accept the loss of low-frequency resolution.
 
-### 8.2 Mic and software setup
+### 8 .2 Mic and software setup
 
 - Plug the mic in before launching the measurement software and leave it connected for the whole session.
 - Select the mic specifically, not "default device". Set the sample rate to 48 kHz. Turn off any operating-system audio enhancements for the mic.
@@ -469,7 +493,7 @@ Outdoors on a hard, flat surface (concrete or asphalt) with nothing large within
 - Close other programs, turn off Wi-Fi, and keep the laptop on mains power. Interruptions to audio can corrupt a measurement.
 - Use single sweeps, not several. Use sweeps no longer than needed. Long sweeps risk overheating compression drivers.
 
-### 8.3 Cabinet and mic placement (the "ground plane")
+### 8 .3 Cabinet and mic placement (the "ground plane")
 
 - **Cabinet on the ground**, facing the mic, not on a stand or a crate.
 - **Mic on the ground**, 2 m from the front of the cabinet, capsule pointing at it, lying flat.
@@ -478,7 +502,7 @@ Outdoors on a hard, flat surface (concrete or asphalt) with nothing large within
 - Mark the ground with chalk so the placement is repeatable. Measure and record the distance.
 - **JMODs are pole-mounted in use.** Do the voicing (§8.4) on the ground plane first, as above. Once the cabinet is on its stand the floor reflection returns and comb-filters the low mids, so do not re-voice the filters from measurements on the stand; use the stand only to check timing, tilt and coverage.
 
-### 8.4 Measure each JMOD band alone
+### 8 .4 Measure each JMOD band alone
 
 Use the processor's mute or solo function (or physically disconnect the other bands) to measure each band alone, with its normal limiters on.
 
@@ -499,29 +523,29 @@ Measurement conditions (guide p. 6): ground plane, 2 m, an EMX-7150 and a Scarle
 
 For the bi-amp route you cannot isolate mid and high. Measure the coax as one band and compare it with the sum of JW's mid and high traces.
 
-### 8.5 Measure the SKRAM
+### 8 .5 Measure the SKRAM
 
 1. Measure with the low-pass and subsonic filter in place and the limiters on.
 2. Measure at the lowest level that gives a clean sweep. Do not start loud.
 3. **Record all four vent tunings.** Block the vents with the port blocks and measure each configuration: all open, three open, two open, one open. Keep the curves. This is the only way to know what each setting does for our cabinets, and it tells you whether the subsonic filter corner is in the right place.
 4. Compare cabinets. Two identical SKRAMs should match within a dB or so across the passband. A cabinet that does not has a leak, a different driver or a wiring problem.
 
-### 8.6 Save and name every measurement
+### 8 .6 Save and name every measurement
 
 Naming scheme: `cabinet-ID_band_vent-setting_date` (for example `JMOD-L_LF_20251115`). Keep a measurement log (§A).
 
-## 9Aligning subs to tops
+## 9 Aligning subs to tops
 
 Do this with one stack, outdoors, on the ground-plane setup from §8, with the sub and the top at their intended relative positions. If the intended arrangement changes later, repeat the alignment for the new arrangement.
 
-### 9.1 Principles recap
+### 9 .1 Principles recap
 
 - Measure the sub alone and the top alone, *at the same mic position*, with the crossover already set.
 - Decide the crossover region (about 60 to 120 Hz for an 80 Hz crossover).
 - Make the phase of the two agree through that region, using delay on the top and, if needed, a polarity flip.
 - Check that the sum is flat through the crossover, then set the relative level.
 
-### 9.2 Method A: phase overlay with a timing reference (preferred)
+### 9 .2 Method A: phase overlay with a timing reference (preferred)
 
 This needs the acoustic timing reference described in §3.8.
 
@@ -536,7 +560,7 @@ This needs the acoustic timing reference described in §3.8.
 
 **Caveats from the tool's documentation and users.** The tool's delay figures for subs are less precise than for tops, because a sub's impulse response has a broad, delayed peak. Latency differences between the electrical paths of the two sources (for example one path through extra processing) also appear as apparent delay. Re-measure after every change, and do not trust a result you have not confirmed with a new measurement.
 
-### 9.3 Method B: step the delay and read the sum (no timing reference)
+### 9 .3 Method B: step the delay and read the sum (no timing reference)
 
 Use this if the acoustic timing reference misbehaves. It needs nothing but the mic.
 
@@ -546,7 +570,7 @@ Use this if the acoustic timing reference misbehaves. It needs nothing but the m
 4. Repeat with the polarity of the sub flipped. If the flipped version gives a clearly better best case, keep the flip.
 5. Refine with 0.1 ms steps around the best delay.
 
-### 9.4 Method C: the null test (field check)
+### 9 .4 Method C: the null test (field check)
 
 A fast sanity check that works with a sine generator and an SPL meter.
 
@@ -556,15 +580,15 @@ A fast sanity check that works with a sine generator and an SPL meter.
 4. **Un-invert the polarity.** They are now in phase at that frequency.
 5. Confirm with a measurement. This method aligns at a single frequency only; always check the sum across the whole crossover region.
 
-### 9.5 Set the relative level
+### 9 .5 Set the relative level
 
 After alignment, compare the sub's and the top's passband levels, well away from the crossover: the sub around 40 to 70 Hz and the top around 100 to 200 Hz. Trim the sub gain until the two sit at the same level (flat). Then decide, as a separate step, whether to add a low-frequency lift for taste (§12).
 
-### 9.6 Record, repeat for the arrangement, copy to the other stack
+### 9 .6 Record, repeat for the arrangement, copy to the other stack
 
 Write down: delay on tops, polarity, gains, the arrangement (two-high, side-by-side, centre cluster), the mic position and the temperature. If the physical arrangement changes, the delay changes with it.
 
-### 9.7 Arrangement C: aligning pole-mounted tops to the centre cluster
+### 9 .7 Arrangement C: aligning pole-mounted tops to the centre cluster
 
 Our baseline puts the sub cluster in the centre and a JMOD on a pole at each side. The tops are not on top of the subs, so the alignment in §9.2 to §9.4 has to be done with the real geometry, and the delay on each top is not the number you would get with the cabinets side by side.
 
@@ -578,15 +602,15 @@ Our baseline puts the sub cluster in the centre and a JMOD on a pole at each sid
 
 [Calculated]
 
-## 10Stereo and mono
+## 10 Stereo and mono
 
-### 10.1 The default
+### 10 .1 The default
 
 **Stereo tops, mono subs.** Two stacks with identical settings. Tops receive left and right. The subs receive the sum below about 80 Hz. A DJ mixer's mono switch gives full-band mono, which is one switch away.
 
 Why mono subs: bass in dance music is essentially mono and gives little directional information below about 100 Hz, so a summed low band avoids cancellation from out-of-phase low content. Why stereo tops: width and detail for IDM, techno and house, with 90° horizontal coverage that lets most of the floor hear both sides.
 
-### 10.2 What it adds to the work
+### 10 .2 What it adds to the work
 
 1. **Routing.** The input matrix described in §6.4.
 2. **Presets.** One preset per stack, mirrored. Tune one stack fully, copy it to the other.
@@ -596,7 +620,7 @@ Why mono subs: bass in dance music is essentially mono and gives little directio
    - Listen at the centre, then to the left and right of the mix position.
 4. **Delays.** Nothing new if the mix position is equidistant from both stacks. If not, delay the nearer one by the path difference. The sub-to-top delay is the same on both sides.
 
-### 10.3 The layout matters more than the settings
+### 10 .3 The layout matters more than the settings
 
 If the two stacks carry subs and are far apart, they act as two separate sources playing the same bass. Listeners off the centre line hear the sides at different moments, which carves notches in the response that EQ cannot fill. This is the "power alley". Feeding both the same mono signal does not prevent it: the spacing causes it.
 
@@ -612,7 +636,7 @@ If a room is small, or the stacks are only a few metres apart, A or B will sound
 
 **Growth path: side stacks.** The plan's later step puts SKRAMs, SKHORNs or other bass bins under the JMODs so the tops reach mounting height without poles. That puts bass sources at the sides again, so the power alley returns in proportion to how much bass the side stacks carry. Options to test when you get there, none verified: (a) high-pass the side-stack bass cabinets higher (for example 60 to 80 Hz) so the centre cluster carries the lowest octave and the side stacks carry only the 80 to 160 Hz band where the JMOD is weakest (plan §08); (b) give the side-stack subs their own delay and level and measure the combined response at several positions; (c) accept two sub groups if the stacks stay within a few metres. In every case re-run §9 for the new arrangement, because the delays change.
 
-## 11Verifying limiters
+## 11 Verifying limiters
 
 Do this once, carefully, with a hand free to turn the level down.
 
@@ -625,7 +649,7 @@ Do this once, carefully, with a hand free to turn the level down.
 
 Document the result as part of the preset record (§13).
 
-## 12Tuning in a venue
+## 12 Tuning in a venue
 
 The aim is to change as little as possible. The cabinets were tuned outdoors on the ground plane. A venue adds its own room, so measure, make small corrections, and stop.
 
@@ -638,7 +662,7 @@ The aim is to change as little as possible. The cabinets were tuned outdoors on 
 7. **Listen** with reference tracks: something with a clean sub-bass sweep, a well-known kick drum, a vocal, hats and percussion, and one or two of your own tracks that you know well. Walk the room.
 8. **Set the level cap** (§14) with a calibrated SPL meter at the mix position, and in line with local limits.
 
-## 13Document, back up, lock
+## 13 Document, back up, lock
 
 - [ ] **Export every preset** to a file, in the processor's native format, and also screenshot or print each page of settings. Store copies off the laptop.
 - [ ] Fill in the **preset record** (§A): per output, filters, EQ, gain, delay, polarity, limiter values, the amp model and its gain, the date, who set it, and the measurements that justify it.
@@ -648,9 +672,9 @@ The aim is to change as little as possible. The cabinets were tuned outdoors on 
 - [ ] Keep a **recovery copy** of the factory-default and of the last known good preset on the laptop and on a USB stick in the case.
 - [ ] **Two people** should be able to run the whole procedure. The plan lists tuning knowledge concentrated in one person as a risk.
 
-## 14Event day
+## 14 Event day
 
-### 14.1 Setup
+### 14 .1 Setup
 
 1. Place the sub cluster and the JMOD stands to the agreed arrangement; measure and record the distance from the cluster and from each top to the mix position.
    - **Stands:** legs fully open on firm, level ground; ballast bag on the centre column; pole locking screw or ring lock tight; the JMOD's pole flange bolts checked; cable strain-relieved so the cable cannot pull the stand over; the area under and around each stand kept clear of the audience.
@@ -661,7 +685,7 @@ The aim is to change as little as possible. The cabinets were tuned outdoors on 
 5. Recall the preset. Confirm the right one is loaded and that nothing is bypassed.
 6. Bring the level up from zero with pink noise at a low level.
 
-### 14.2 Quick checks (about ten minutes)
+### 14 .2 Quick checks (about ten minutes)
 
 - [ ] **Each channel, one at a time:** pink noise on each output, one cabinet at a time. Confirm it is the right cabinet and right band, and that nothing rattles or buzzes.
 - [ ] **Polarity and sum:** mono pink noise on both subs, then the top and sub together: the sum at the crossover should not dip. If it does, a cable has the wrong polarity.
@@ -670,7 +694,7 @@ The aim is to change as little as possible. The cabinets were tuned outdoors on 
 - [ ] **Limiters** are not engaged at normal level; clip lights are off.
 - [ ] **One walk-through** with a reference track.
 
-### 14.3 Operating rules
+### 14 .3 Operating rules
 
 - **The master level is the only knob most people touch.** Keep the mixer's master near its nominal position and use the processor or amplifier master for overall level.
 - **Level cap.** Agree a maximum level before the event. Put an SPL meter at the mix position or the loudest audience position, and watch it. Check local rules: in Germany, audience-exposure limits (DIN 15905-5) apply to many events, and the numbers in the 2007 edition (99 dB(A) average over 30 minutes and 135 dB(C) peak at the loudest audience position) were replaced by a 2022 edition whose limits I could not confirm.
@@ -679,14 +703,14 @@ The aim is to change as little as possible. The cabinets were tuned outdoors on 
 - **Hearing protection** for the operator and crew at the mix position, and offered to the audience where required.
 - **Thermal.** If a cabinet or amplifier gets hot, let it cool. Keep amp vents clear.
 
-### 14.4 Shutdown
+### 14 .4 Shutdown
 
 1. Mute the source, turn the level down.
 2. **Amplifiers off first**, then the processor, then the source.
 3. Disconnect cables, label them, and stack them in their cases.
 4. Note anything unusual in the event log: failures, limiter activity, complaints, changes. Update the preset record if anything was changed.
 
-## 15Troubleshooting
+## 15 Troubleshooting
 
 | Symptom | Likely causes | Checks |
 | --- | --- | --- |
@@ -705,11 +729,11 @@ The aim is to change as little as possible. The cabinets were tuned outdoors on 
 | Alignment tool gives implausible delay | Cycle ambiguity, polarity flip not accounted, latency differences | §9.2 caveats; confirm with a new measurement |
 | Amp too hot or shuts down | Blocked vents, low impedance, cable shorted | Check airflow, loads and cable continuity |
 
-## AWorksheets
+## A Worksheets
 
 Copy these into your own sheet or print them.
 
-### A.1 Channel map
+### A .1 Channel map
 
 | Output | Name | Amp channel | Cabinet | Speakon pins | Load | Filters | Delay | Gain |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -720,7 +744,7 @@ Copy these into your own sheet or print them.
 | 5 | R-COAX | | JMOD-R | 2± (FB464) | 16 Ω | as L-COAX | as L-COAX | |
 | 6 | SUB-B | | SKRAM-3 (+ 4) in the centre cluster | 1± | 4 Ω | as SUB-A | as SUB-A | |
 
-### A.2 Limiter calculation
+### A .2 Limiter calculation
 
 | Output | Driver and load | Nominal W | Program W | Driver RMS V | Driver peak V | Amp model | Amp gain (dB / ×) | Amp max V | Set RMS V | Set peak V | Processor dBu (RMS / peak) | Attack / release |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -728,26 +752,26 @@ Copy these into your own sheet or print them.
 | L-COAX | DCX464 (16 Ω) via FB464, shared channel | mid 110 / HF 80 | mid 220 / HF 160 | start 35 (ceiling 42) | start 50 (ceiling 59) | | | | | | | RMS 800 ms / 2,400 ms; peak 2.7 ms / 21 ms |
 | SUB-A | 21DS115 (8 Ω, one, or 2 in parallel) | 1,700 | 3,400 | 116.6 | 164.9 | | | | | | | |
 
-### A.3 Alignment log
+### A .3 Alignment log
 
 | Date | Arrangement | Stack | Sub-to-top delay (ms, on tops) | Polarity | Crossover (Hz) | Sub gain (dB) | Mic position | Temperature | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-### A.4 Measurement log
+### A .4 Measurement log
 
 | File name | Date | Cabinet ID | Band / vent setting | Mic position and distance | Processing on | Level | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 
-### A.5 Preset record
+### A .5 Preset record
 
 | Preset name | Date | Who | Purpose | Outputs changed | Reason | Backup file | Verified by measurement |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 
-### A.6 Event checklist
+### A .6 Event checklist
 
 One page version of §14. Print and tick off.
 
-## BQuick maths
+## B Quick maths
 
 | Task | Formula | Example |
 | --- | --- | --- |
@@ -763,11 +787,11 @@ One page version of §14. Print and tick off.
 | Cable loss | R = 0.0172 × L × 2 / A (Ω, L in m, A in mm²) | 10 m of 2.5 mm² = 0.14 Ω |
 | Level change per doubling of distance | −6 dB in free field | |
 
-## CGlossary
+## C Glossary
 
 **AES power**: a loudspeaker's nominal power handling under a standard long-term pink noise test. **Alignment**: choosing delay and polarity so two sources add properly. **Amp gain**: the voltage amplification of the amplifier, in dB. **BU (Butterworth)**: a filter type with a flat passband. **Clip**: a signal exceeding what a stage can pass, flattening its peaks. **Crest factor**: the ratio of peak to RMS level. **Crossover**: a filter set that splits a signal into bands. **dBu / dBV / dBFS / dB SPL**: see §3.1. **FIR / IIR**: filter families; IIR changes phase, FIR can correct it at the cost of latency. **Gain structure**: sharing level across stages so none clips early or adds avoidable noise. **Ground plane**: a measurement method with the cabinet and mic on the ground. **Group delay**: how much each frequency is delayed; large near a sub's tuning. **Impulse response**: a speaker's response to a click; the basis of measurement. **Limiter (peak, RMS)**: protection that holds level below a ceiling; the RMS version responds to sustained heat. **LR (Linkwitz–Riley)**: a crossover type that sums flat. **Mono sum**: left plus right combined. **Null**: a deep dip where two signals cancel. **PEQ**: parametric equaliser. **Phase**: timing offset in degrees, varying with frequency. **Polarity**: signal inversion, 180° at all frequencies. **Power alley**: interference between separated subs playing the same bass. **RTA**: real-time spectrum display. **Subsonic filter**: a high-pass that protects a sub below its tuning. **Timing reference**: a signal that lets a measurement system share absolute timing. **Tuning (box)**: the frequency at which a vented or horn cabinet's output peaks and its cone motion is smallest. **Voicing**: setting a cabinet's EQ to the designer's target.
 
-## DSources and open checks
+## D Sources and open checks
 
 ### What this guide is built from
 
