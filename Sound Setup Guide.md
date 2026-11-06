@@ -167,7 +167,7 @@ Conclusions that change the shopping list: (1) a Powersoft is only worth its pri
 | Output power into the loads we will use (4 Ω for woofers and subs; 16 Ω or 8 Ω for the coax via the FB464) | Limiter ceilings | Use the continuous rating, not a peak figure |
 | Clip indicators, preferably with a switchable clip limiter | Detect headroom problems | |
 | Input attenuators or a sensitivity control per channel | Gain structure | |
-| Low noise floor and quiet fans | IDM and ambient material expose hiss (see the plan, §08) | Check with the speakers on, source muted |
+| Low noise floor and quiet fans | IDM and ambient material expose hiss (see the [earlier proposal](Notes/2026-10-23%20full-system%20proposal.md#08-stack-stereo--sub-count)) | Check with the speakers on, source muted |
 | Stable into 4 Ω, per channel | Two 8 Ω woofers in parallel is 4 Ω | Lower impedance dips happen; check the amp's 2 Ω rating if it has one |
 
 ### Two decisions that change the procedure
@@ -634,7 +634,7 @@ For arrangement C, the delay on each top comes from the geometry: start from the
 
 If a room is small, or the stacks are only a few metres apart, A or B will sound acceptable. Verify by measuring at the centre and at two or three off-axis positions.
 
-**Growth path: side stacks.** The plan's later step puts SKRAMs, SKHORNs or other bass bins under the JMODs so the tops reach mounting height without poles. That puts bass sources at the sides again, so the power alley returns in proportion to how much bass the side stacks carry. Options to test when you get there, none verified: (a) high-pass the side-stack bass cabinets higher (for example 60 to 80 Hz) so the centre cluster carries the lowest octave and the side stacks carry only the 80 to 160 Hz band where the JMOD is weakest (plan §08); (b) give the side-stack subs their own delay and level and measure the combined response at several positions; (c) accept two sub groups if the stacks stay within a few metres. In every case re-run §9 for the new arrangement, because the delays change.
+**Growth path: side stacks.** The plan's later step puts SKRAMs, SKHORNs or other bass bins under the JMODs so the tops reach mounting height without poles. That puts bass sources at the sides again, so the power alley returns in proportion to how much bass the side stacks carry. Options to test when you get there, none verified: (a) high-pass the side-stack bass cabinets higher (for example 60 to 80 Hz) so the centre cluster carries the lowest octave and the side stacks carry only the 80 to 160 Hz band where the JMOD is weakest ([earlier proposal](Notes/2026-10-23%20full-system%20proposal.md#08-stack-stereo--sub-count)); (b) give the side-stack subs their own delay and level and measure the combined response at several positions; (c) accept two sub groups if the stacks stay within a few metres. In every case re-run §9 for the new arrangement, because the delays change.
 
 ## 11 Verifying limiters
 
