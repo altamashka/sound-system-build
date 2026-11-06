@@ -560,7 +560,7 @@ A forum poster put the effort at roughly 25 hours for experienced builders and o
 
 ### D1 JMOD stands and the sub cluster
 
-**Working layout (decided).** Sub cluster in the centre, JMODs on poles to the left and right. This is Arrangement C in the Plan: the subs behave as one source, the tops get a per-side delay (Sound Guide §10), and nothing needs lifting above the floor except the JMODs on their stands. Later, side stacks of SKRAM, SKHORN or similar can replace the poles (the Plan, §08).
+**Working layout (decided).** Sub cluster in the centre, JMODs on poles to the left and right. This is Arrangement C in the Plan: the subs behave as one source, the tops get a per-side delay (Sound Guide §10), and nothing needs lifting above the floor except the JMODs on their stands. Later, side stacks of SKRAM, SKHORN or similar could replace the poles (see the [earlier proposal](Notes/2026-10-23%20full-system%20proposal.md#08-stack-stereo--sub-count)).
 
 **Stands.** The stand rating is not a marketing figure to take on trust.
 
