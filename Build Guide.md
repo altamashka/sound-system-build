@@ -13,17 +13,6 @@ Companion documents: [Sound Setup Guide](Sound%20Setup%20Guide.md) (measuring, a
 - [C · SKRAM build](#c--skram-build)
 - [D · Deployment and handover](#d--deployment-and-handover)
 
-<details>
-<summary>What changed from v1</summary>
-
-- The JMOD and SKRAM builds are separate parts with their own bill of materials, cut list, CAM review, assembly, wiring, test card and open items.
-- Facts read from the design files that v1 could not read: the stock sizes both CAMs assume, the SKRAM tool and cutting data, the differences between the three SKRAM CAM files, per-part sizes and hole schedules for both designs, the throat adapter's mounting pattern.
-- Resolved: the JMOD bolt count (**4 per cabinet, 8 for two**), the Speakon wiring pin assignment, the DCX464 and 12NDL88 specifications, the 21DS115 bolt circle, the SKRAM stock size.
-- Catches found in the files (details in B5, B6, C4, C5): the printed adapter is 120 mm in one direction against the guide's 110 mm; the SKRAM CAM assumes 1250 mm-wide boards and mirrors the sheet when it flips it; one SKRAM outline is cut full depth in one pass; the SKRAM nests waste about five sheets of plywood across four cabinets.
-- New: pole-mount design and stand checks for the JMODs (B11, D1), build calendars, expected meter readings, and the stage-by-stage route from poles to side stacks.
-
-</details>
-
 ## A · Shared basics
 
 ### A1 How much to trust each statement
@@ -54,32 +43,11 @@ I read the CAM documents, STEP and DXF files as data. I did not open them in Fus
 
 ### A4 Materials and sheet counts
 
-**Sourcing update, 23 October 2026.** See [Wood sourcing review](Wood%20sourcing%20review.md) for supplier evidence and delivered-cost comparisons. Alternative Makers lists uncoated BB/BB birch, 2500 × 1250 mm: **12 mm €139.83; 18 mm €167.79** per sheet. VAT, manufacturer, birch-throughout core, glue class and availability still need confirmation. Matching BB/BB labels establish face grade, not identical core/bond quality. First JMOD pair: **€447.45**; stage 1 as supplied: **€1,733.85**; full rig as supplied: **€3,020.25**. These supersede the old Hornbach material allowance. [User-supplied portal, Calc]
+Use uncoated birch plywood with BB/BB faces, a sound birch core and glue suitable for the conditions. Check the specification and VAT before ordering. Let sheets sit flat in the workshop for two days; measure thickness in at least six places and record the range. [Practice]
 
-**Plywood.** Birch, BB/BB faces, void-free core, bonding class suitable for the conditions. Acclimatise sheets flat in the workshop for two days. Measure the real thickness of every sheet type at six or more places with calipers and record the mean and spread. [Practice]
-
-**Board size is a real constraint.** The two designs assume different sheets:
-
-| Job | What the file assumes | What that means for German boards |
-| --- | --- | --- |
-| JMOD, all three sheets | STEP stock bodies of 1219.2 × 2438.4 mm (4 × 8 ft), 12 mm ×2 and 18 mm ×1. The CAM stock is a solid derived from the model, not a fixed size [Model] | Fits 2500 × 1250 with room, and 2500 × 1220 with 0.8 mm to spare in the narrow direction, so check the real extents of the nest in Fusion before buying 1220 boards |
-| SKRAM, all seven setups | Fixed box 2500 × 1250 mm, 18 mm or 12 mm thick, model placed 10 mm in from the left and front edges [Model] | Needs 1250-wide boards. My scan of the saved toolpaths puts the nests at about 2478 × 1148 mm (18 mm sheet 1), 2308 × 1186 mm (sheet 2), and **873 × 1227 mm for the 12 mm sheet**, which does not fit a 1220-wide board with its 10 mm margin [Model, heuristic] |
-
-The plan's Hornbach prices are for 2500 × 1220 boards. Buy 2500 × 1250 (the draft trade request already asks for that), or re-nest the 12 mm parts.
-
-**Sheets needed (base enclosure stock; re-nests unverified).** The SKRAM nests waste plywood. 18 mm sheet 3 contains one part (the 180° turn panel F, about 490 × 584 mm) and the single 12 mm sheet is about one third used.
-
-| Scenario | 18 mm | 12 mm | Total sheets |
-| --- | --- | --- | --- |
-| Stage 1 as supplied: 2 JMOD + 2 SKRAM | 1 + 6 = 7 | 2 + 2 = 4 | 11 |
-| Full rig as supplied: 2 JMOD + 4 SKRAM | 1 + 12 = 13 | 2 + 4 = 6 | **19** (the plan's figure) |
-| Stage 1 re-nested | 1 + 5 = 6 | 2 + 1 = 3 | 9 |
-| Full rig re-nested | 1 + 9 = 10 | 2 + 2 = 4 | **14** |
-
-"Re-nested" means sharing F-panel stock and putting the 12 mm parts of two SKRAMs on each 12 mm sheet. These are planning targets requiring regenerated, simulated CAM. Full batch optimisation saves **€783.03** at the makerspace prices (3 × 18 mm + 2 × 12 mm), giving **€2,237.22** for the rig's wood. **The 14-sheet target assumes all four SKRAMs participate.** Our conservative sequence remains: prove the first SKRAM pair with the original layouts, then optimise the second pair. That uses **12 × 18 mm + 5 × 12 mm = 17 sheets**, costing **€2,712.63**, unless a verified offcut inventory and revised nest improve it. Do not budget 14 while consuming the first pair's full eight sheets. Quantities exclude mistakes and accessories that cannot be recovered from offcuts. [Calc from existing Model findings; not simulated]
-
-
-**Other portal stock.** Phenolic-coated birch is not a drop-in glue/finish substitute; maritime pine is a different material, and its 19 mm stock does not match 18 mm CAM. Keep uncoated birch for the first builds. See the sourcing review.
+- **JMOD:** the supplied layout is for two cabinets on two 12 mm sheets and one 18 mm sheet. The model uses 1219.2 × 2438.4 mm stock; 2500 × 1250 mm sheets fit. Check the cutting layout before buying for one cabinet. [Model]
+- **SKRAM:** the supplied layout for one cabinet uses three 18 mm sheets and one 12 mm sheet, 2500 × 1250 mm. The 12 mm layout does not fit a 1220 mm-wide sheet. [Model]
+- Alternative layouts that save wood are unverified: regenerate and simulate them before relying on them. See [Wood sourcing review](Wood%20sourcing%20review.md) for sheet prices and the larger-build calculations.
 
 **Adhesives and sealants.** JMOD: a polyurethane construction adhesive, as the guide says "construction adhesive"; check pot life so the staged glue-up in B9 is not rushed. SKRAM: a waterproof PVA (D3 or D4) or PU wood glue on every dado, plus a PU or MS-polymer sealant bead at internal corners. Test any product on offcuts including a glue joint before finishing over it. [Practice]
 
@@ -138,27 +106,11 @@ The makerspace's own procedure overrides these steps. [Practice]
 
 ### B1 At a glance
 
-| | |
-| --- | --- |
-| What | JW Sound's JMOD 2.02 multiple-entry horn top: two 12″ midbass drivers and a coaxial compression driver on a 3D-printed throat adapter and CNC-cut flares [Guide] |
-| Size, weight | 750 W × 470 H × 420 D mm, 34 kg [Guide] |
-| Coverage, range | 90° × 60° constant directivity, horizontal control to 320 Hz and vertical to 500 Hz; 80 Hz to 18.5 kHz; Fb 70 Hz, F3 55 Hz, F10 45 Hz [Guide] |
-| Drivers | 2 × B&C 12NDL88 (4.95 kg each), 1 × B&C DCX464 16 Ω (3.64 kg) = 13.5 kg of drivers, so the empty shell is about 20 kg [Datasheet, Calc] |
-| Plywood, two cabinets | 2 sheets 12 mm and 1 sheet 18 mm, birch [Guide] |
-| CNC | Fusion CAM: 6 setups, 18 operations, ¼″ compression bit and ¼″ ball-nose, three flips [Model] |
-| Printing | One throat adapter per cabinet, 169.9 × 120.0 × 90.0 mm, 438 cm³ [Model] |
-| Amplification | Tri-amp (3 channels, NL8) or bi-amp through the B&C FB464 (2 channels, 4-pole). Our working assumption is the FB464 [Plan] |
-| Biggest risks | CAM and flip registration; the woofer seat being flat enough to seal; the throat-adapter transition; stand stability once it is on a pole |
+One JMOD is about 750 × 470 × 420 mm and 34 kg finished. It uses two B&C 12NDL88 drivers and one 16 Ω DCX464, plus a printed adapter. The working plan uses an FB464 crossover and two amplifier channels. The supplied wood layout is for two cabinets. [Guide, Model]
 
 ### B2 What matters to the builder
 
-The horn is the acoustics; the woodwork is only the container that holds the horn shape. In practice that means:
-
-- **Everything inside the horn must be smooth.** Steps, gaps and filler ridges where the printed adapter meets the plywood flares change the response. Guide steps 9 and 10 are not optional cosmetics. [Guide, Practice]
-- **The woofer seat must be flat and airtight.** The guide says the transition where the woofer mounts "needs to be flat for the woofer to seal properly". [Guide]
-- **The ports are part of the tuning.** The bandpass and reflex ports were optimised for low air speed; the ¼″ roundover on the bandpass ports is part of that, and a rough or unrounded port edge chuffs. [Guide]
-- **The throat adapter has indexing geometry** at the rear to make the build repeatable. Use it. [Guide]
-- **Weight and handling.** About 34 kg with an external pole cup carrying all of it. The cup mounting is structural (B11).
+Keep the inside of the horn smooth, especially where the printed adapter meets the wood. The driver seats must be flat and airtight; round the port edges as specified. Use the adapter's locating features. Plan for safe handling of the 34 kg cabinet and, if used, a properly checked pole mount (B11). [Guide, Practice]
 
 ### B3 Bill of materials
 
@@ -383,24 +335,11 @@ I have no measured JMOD build time. Treat the first cabinet as a learning build 
 
 ### C1 At a glance
 
-| | |
-| --- | --- |
-| What | Josh Ricci's single-21″ vented subwoofer; four vents give four tunings [Guide] |
-| Size, weight | 610 W × 914 H × 813 D mm (24″ × 36″ × 32″). Cabinet 52 kg projected, driver 14.7 kg (21DS115) [Guide, Datasheet]; about 68 kg finished [Calc] |
-| Tuning | All vents open 29.5 Hz · three 25.5 Hz · two 20.5 Hz · one 14.5 Hz. Ricci says it is optimised for the 29.5 and 25.5 Hz tunings; the lower ones lose output and vent area [Guide, Web] |
-| Driver | B&C 21DS115, **8 Ω**: 1700 W AES / 3400 W program, Xmax 16.5 mm, Ø547 mm, bolt circle Ø527 mm, cutout Ø508 mm, depth 255 mm [Datasheet] |
-| Plywood per cabinet | 3 sheets 18 mm + 1 sheet 12 mm as supplied (about 2.25 + 0.5 re-nested, see A4) |
-| Parts | 20 part types (A to T), 20 pieces of 18 mm and 21 of 12 mm [Guide] |
-| CNC | Flat 2D, 7 setups (one 12 mm, three 18 mm sheets each cut from both faces), one 3 mm cutter [Model] |
-| Joinery | Dado and rabbet "egg-crate"; no step-by-step assembly instructions are published |
-| Biggest risks | Thickness error compounding through every dado; the sheet flip; a leaking hatch or driver seat; lifting |
+One SKRAM is 610 × 914 × 813 mm and about 68 kg finished. The working driver choice is the 8 Ω B&C 21DS115. The supplied cutting layout uses three 18 mm sheets and one 12 mm sheet. Four vents can be opened or blocked to change tuning; see C9. [Guide, Datasheet, Calc]
 
 ### C2 What matters to the builder
 
-- **The designer says the plans are a chassis guideline.** "The simplified layout drawing is really all that should be adhered to." Bracing, hatch and hardware may be simplified "just make sure it is solid". Outer dimensions can be adjusted "within reason". [Guide]
-- **The internals are the acoustics.** The driver fires into an internal baffle (6° in the layout), then through folded chambers to the mouth; the vents tune the vented chamber. Everything between the driver and the vents must be sealed. [Guide, Model]
-- **Weight.** 52 kg of cabinet is plywood; the sheets are heavy before they are cut. Do not plan to move a finished SKRAM with fewer than two people. [Guide]
-- **Topology note.** Ricci calls it a single-driver sub "similar in design to the Skhorn". A diyAudio forum reply describes SKRAMs as 6th-order bandpass variants that are only slightly horn-loaded. This does not change the build, but it is why the Sound Guide treats the subsonic filter with care. [Guide, Web]
+Keep the designer's layout and dimensions. The internal chambers and vents determine the sound, and the space between the driver and vents must be sealed. Check the wood thickness and sheet alignment before cutting; leaks and mistakes in the joints matter. Move a finished cabinet with at least two people. [Guide, Model]
 
 ### C3 Bill of materials, per cabinet
 
