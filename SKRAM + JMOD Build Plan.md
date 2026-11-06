@@ -4,19 +4,29 @@ Build proposal · v3.1 · 23 Oct 2026 · For collective review
 
 Four horn-loaded 21″ subs and two multiple-entry-horn tops, CNC-cut and assembled at Alternative Makers, deployed as a centre sub cluster with the JMODs on poles left and right and targeted at summer 2027 festival season. Amplification, the SKRAM driver and the sub count are still open: this version sets out the options and says what has and has not been verified. Companion documents: [Sound Setup Guide](Sound%20Setup%20Guide.md) (measuring, aligning, limiting and operating the rig) and [Build Guide](Build%20Guide.md) (cutting, assembly, wiring and checks).
 
-Cabinets**4 + 2**
+- Cabinets: **4 + 2**
+- Project cost: **€11.5–15.9k**, provisional with makerspace wood and supplied nests
+- Per person (8 people): **€1,432–1,993**, provisional; exclusions below
+- Build window: **12 months**
+- Amp channels: **6–8**
 
-Project cost**€11.5–15.9k provisional with makerspace wood, supplied nests**
-
-Per person / 8**€1,432–1,993 provisional; exclusions below**
-
-Build window**12 months**
-
-Amp channels**6–8**
-
-[**01** System](#s1) [**02** Cabinet costs](#s2) [**03** Drivers](#s3) [**04** Amplification](#s4) [**05** DSP & measurement](#s5) [**06** Fabrication](#s6) [**07** Phasing](#s7) [**08** Stack, stereo & sub count](#s8) [**09** Solana](#s9) [**10** Decisions](#s10) [**11** Risks](#s11) [**12** Verified and open checks](#s12)
+- [01 System](#01-system)
+- [02 Cabinet costs](#02-cabinet-costs)
+- [03 Drivers](#03-drivers)
+- [04 Amplification](#04-amplification)
+- [05 DSP & measurement](#05-dsp--measurement)
+- [06 Fabrication](#06-fabrication)
+- [07 Phasing](#07-phasing)
+- [08 Stack, stereo & sub count](#08-stack-stereo--sub-count)
+- [09 Solana](#09-solana)
+- [10 Decisions](#10-decisions)
+- [11 Risks](#11-risks)
+- [12 Verified and open checks](#12-verified-and-open-checks)
 
 **23 October sourcing update.** [Wood sourcing review](Wood%20sourcing%20review.md) records the supplied makerspace prices, current retailer comparisons and outstanding specifications. At displayed makerspace prices the full rig uses €3,020.25 of wood with original nests, €2,237.22 with all SKRAMs batch re-nested, or €2,712.63 when the first pair is unmodified and only the second pair is re-nested. VAT is not stated in the portal. The headline replaces only the old wood allowance; it still excludes the separately flagged DCX464 uplift and any other stale-price corrections.
+
+<details>
+<summary>Changes from earlier versions</summary>
 
 Changes from v2 (11 Oct 2026)
 
@@ -26,7 +36,9 @@ Changes from v1
 
 Sub count doubled to four SKRAM. Amplification reopened as three lanes with real price evidence (§04). SKRAM driver recommendation is the 21DS115, not a "higher-end" swap (§03). SKRAM height is 914 mm, which makes a two-high stack with a JMOD about 2.3 m (§08). JMOD pole mounts are external hardware per the guide, so they do not touch the CNC files. Plain PETG and PCTG are sanctioned for the printed throat adapter, so a missing PETG-CF nozzle is not a blocker. JMOD CAM is freeform 3D and is not a flat cut sheet (§06). Table saw and extra printers are now available. Genre fit, stereo versus mono, and where to save money are covered at the end of §02 and in §08.
 
-## 01System
+</details>
+
+## 01 System
 
 Both designs are open-source and settled. SKRAM is Josh Ricci's single-21″ horn-loaded reflex sub. JMOD is JW Sound's multiple-entry-horn top. They cross at 80 Hz. The working layout is a centre cluster of SKRAMs, with the JMODs on poles left and right. Side stacks are a later option.
 
@@ -53,7 +65,7 @@ SKRAM orientation, confirmed
 
 v1 listed SKRAM as 610 × 813 × 914 mm without saying which is height. The STEP part files settle it: the side panel is 813 × 914 mm, the top and bottom panels are 584 × 813 mm, and the back panel is 584 × 888 mm. So width is 610 mm (24″), depth 813 mm (32″), and **height 914 mm (36″)**. The cut sheet's three-view drawing agrees.
 
-## 02Cabinet costs
+## 02 Cabinet costs
 
 **Current wood baseline (23 October):** Alternative Makers lists BB/BB birch, 2500 × 1250 mm, at €167.79 (18 mm) and €139.83 (12 mm), VAT basis/specification unconfirmed. The original cost tables below are retained as dated estimates so other unrefreshed prices are not presented as new quotes. See the reconciliation below and [Wood sourcing review](Wood%20sourcing%20review.md). The old Hornbach €112/€88 mixed-core, 1220-wide boards are not equivalent procurement stock.
 
@@ -147,7 +159,7 @@ With the current makerspace wood and original nests, stage 1 is provisionally �
 
 Draft plywood request (German, not sent): *Bitte um Angebot: Birke Multiplex 18 mm und 12 mm, 2500 × 1250 mm, BB/BB, BFU 100, lückenfrei im Kern, Staffelpreise ab 10/25/50 Platten, Zuschnitt- und Lieferkosten nach Berlin.*
 
-## 03Drivers
+## 03 Drivers
 
 ### SKRAM · 21″ options
 
@@ -192,7 +204,7 @@ JMOD's guide states 4/8/16 Ω woofers are all acceptable — wire for the desire
 
 SKRAM is a single driver, sold in 4 Ω and 8 Ω. The wiring choice depends on the amp lane (§04): one SKRAM per channel at 4 Ω, or two 8 Ω SKRAMs in parallel on one channel.
 
-## 04Amplification
+## 04 Amplification
 
 This section is open. The collective favours Powersoft; the evidence below shows where that is cheap and sensible and where it is not.
 
@@ -259,7 +271,7 @@ Before buying any used amp: confirm the exact variant (DSP or not), test every c
 
 Buy the FB464s regardless of lane. They halve JMOD channel requirements and de-risk the coax while the collective is still learning to set limiters. See §05 for a caveat.
 
-## 05DSP & measurement
+## 05 DSP & measurement
 
 Both designers publish *acoustic* targets, not filter settings. The Solana guide states it directly: electrical crossover points and slopes are not equal to acoustic ones. Filters are shaped until the measurement matches the target. Wherever the DSP lives (in the amp or outboard), the presets and limiter settings need documenting and backing up before any event.
 
@@ -309,7 +321,7 @@ Sequencing
 
 Buy the mic in month one, not when the first cabinet is finished. It is needed to verify SKRAM vent tuning and it is the cheapest item on the list. Learning REW on a single-driver sub is materially easier than learning it on a three-way.
 
-## 06Fabrication
+## 06 Fabrication
 
 The equipment table below is as reported by the collective. I could not find public information on Alternative Makers, so fees, booking rules, supervision requirements and the CNC's real stock size are unconfirmed.
 
@@ -363,7 +375,7 @@ JMOD pole mount
 
 The JMOD guide recommends external pole-mount hardware, since space inside is tight. Position it on the centre of mass, 245 mm from the front lip with 12NDL88s. This is a bolt-on part, not a CNC change, and **because the JMODs start on poles it is part of the first build**, not an accessory. Stands: the K&M 21436 is rated 40 kg, too thin a margin for a 34 kg cabinet outdoors; the K&M 21435 (steel tripod, 1430–2240 mm, 5.9 kg) is listed at 50 kg by one retailer, and earlier sellers gave 35 kg, so confirm with K&M. My static tip-over estimate for a 34 kg JMOD on such a stand at full height is about 12 m/s (45 km/h) of steady wind unballasted, about 15 m/s with 20 kg of ballast, which is why the Build Guide (D1) sets a working limit of about 8 m/s gusts and requires ballast and guying. Pole-cup candidates, a skid-plate construction and the checks are in Build Guide B11.
 
-## 07Phasing
+## 07 Phasing
 
 Tops before subs. Two JMODs make a working system the day they are finished — F3 is 55 Hz. JMOD also needs three sheets of plywood against SKRAM's sixteen, so it is the cheaper and faster first phase. The SKRAMs follow in two pairs, and each stage is usable on its own. Phase allowances below are historical estimates; use the 23 October wood totals in §02 and refresh remaining purchases before ordering.
 
@@ -455,7 +467,7 @@ Jun – Aug 27
 
 Stage 2 is not a dependency for the first events. If it slips, the rig runs two SKRAMs together in the centre with JMODs on poles left and right, which is a complete system. Swap the JMOD and SKRAM phases only if the programme is bass-led and a tops-only period would be unusable in practice; the cost is that nothing makes sound until roughly March.
 
-## 08Stack, stereo & sub count
+## 08 Stack, stereo & sub count
 
 Question: four SKRAMs in two-high stacks, a different or additional sub type, or a rethink of the cabinets. Recommendation: stay with four SKRAMs and two JMODs, and settle the arrangement before pair 2.
 
@@ -550,7 +562,7 @@ All four SKRAMs together in the centre (a row of four, 2.4 m wide and 0.9 m tall
 
 No independent measurements of JMOD or SKRAM were found in this pass. The designers' own published measurements are the reference.
 
-## 09Solana
+## 09 Solana
 
 Deferred to a later phase. Not costed into the 2027 plan.
 
@@ -571,7 +583,7 @@ Trigger condition
 
 Revisit when booth monitoring becomes a limiting factor at real events — not before. Nothing in the 2027 build depends on this decision, and the print files do not expire.
 
-## 10Decisions
+## 10 Decisions
 
 Items that need resolving at this meeting. Everything else can wait.
 
@@ -623,7 +635,7 @@ Items that need resolving at this meeting. Everything else can wait.
 
     CNC and CAM, assembly, DSP and measurement, procurement. JMOD needs someone who can run Fusion CAM. Naming roles now prevents the tuning falling to whoever is left.
 
-## 11Risks
+## 11 Risks
 
 | Risk | Impact | Mitigation |
 | --- | --- | --- |
@@ -653,7 +665,7 @@ Items that need resolving at this meeting. Everything else can wait.
 
 Costs are estimates for discussion, not quotes. Everything in §02 and §04 should be re-quoted locally before any order is placed.
 
-## 12Verified and open checks
+## 12 Verified and open checks
 
 ### Checked in the design packages
 
