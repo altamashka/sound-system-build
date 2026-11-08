@@ -4,7 +4,7 @@ Working guide · v2 draft · 11 Oct 2026 · For collective review
 
 How to measure, align, limit and operate the SKRAM + JMOD rig. Written for people who already mix, produce, DJ or run sound, but have not set up a multi-amped system of passive cabinets before. It is brand-neutral: processors, amps and measurement software appear only as examples.
 
-Read §0 and §1 before the meeting. §2 is the buyer's checklist for the processor and amps. The rest is the procedure you follow once the cabinets exist. The cabinets themselves are built from the [Build Guide](Build%20Guide.md); the budget and decisions are in the [SKRAM + JMOD Build Plan](SKRAM%20+%20JMOD%20Build%20Plan.md).
+Read §0 and §1 before the meeting. §2 is the buyer's checklist for the processor and amps. The rest is the procedure you follow once the cabinets exist. The cabinets, budget and decisions are covered in the [build plan](SKRAM%20%2B%20JMOD%20Build%20Plan.md) and the designer files.
 
 <details>
 <summary>What changed in v2 (11 Oct 2026)</summary>
@@ -678,7 +678,7 @@ The aim is to change as little as possible. The cabinets were tuned outdoors on 
 
 1. Place the sub cluster and the JMOD stands to the agreed arrangement; measure and record the distance from the cluster and from each top to the mix position.
    - **Stands:** legs fully open on firm, level ground; ballast bag on the centre column; pole locking screw or ring lock tight; the JMOD's pole flange bolts checked; cable strain-relieved so the cable cannot pull the stand over; the area under and around each stand kept clear of the audience.
-   - **Wind:** if gusts exceed about 8 m/s (30 km/h) do not run the JMODs on tripod stands unless they are guyed and ballasted; see the Build Guide §D1 for the estimate behind this. Take them down in a gale.
+   - **Wind:** if gusts exceed about 8 m/s (30 km/h) do not run the JMODs on tripod stands unless they are guyed and ballasted; check the stand and mounting arrangement for the conditions. Take them down in a gale.
 2. Connect the speaker cables, with the **amps off** and the processor muted.
 3. Confirm labelling, polarity and pinouts at every connector. A wrong cable is the most common failure.
 4. Power on in this order: **source, processor, amplifiers last**. Amps on last avoids a power-on thump into the speakers.

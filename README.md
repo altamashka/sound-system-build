@@ -4,12 +4,10 @@ A shared plan for building JMOD tops and SKRAM subs at Alt Makers in Berlin. The
 
 ## Find what you need
 
-- [Build plan](SKRAM%20%2B%20JMOD%20Build%20Plan.md) — system, budget, schedule and decisions.
+- [Build plan](SKRAM%20%2B%20JMOD%20Build%20Plan.md) — the starting plan, parts, build steps and budget.
 - [Wood sourcing review](Wood%20sourcing%20review.md) — dated prices, sheet quantities and outstanding material checks.
-- [Build Guide](Build%20Guide.md) — cutting, assembly, wiring and checks.
 - [Sound Setup Guide](Sound%20Setup%20Guide.md) — DSP, measurement, alignment and operation.
 - [Workshop context](context/workshop.md) — shared makerspace information.
-- [JMOD plywood working note](Notes/JMOD%20plywood%20-%20Possling%20sheets.md) — 12 October 2026; the sourcing review is newer.
 
 ## Designer files
 

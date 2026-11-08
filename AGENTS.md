@@ -1,6 +1,6 @@
 # Sound system build
 
-Read `context/workshop.md`, `README.md` and `SKRAM + JMOD Build Plan.md` for scope and open decisions. Use `Wood sourcing review.md` for dated procurement evidence, `Build Guide.md` for fabrication and `Sound Setup Guide.md` for operation. Do not silently merge these into another duplicate handbook.
+Read `context/workshop.md`, `README.md` and `SKRAM + JMOD Build Plan.md` for scope and open decisions. Use `Wood sourcing review.md` for dated procurement evidence and `Sound Setup Guide.md` for operation. The build plan is the single starting document for fabrication and decisions.
 
 The local designer packages are excluded from the initial remote repo; inspect actual files before claiming CAD/CAM validation. Do not fabricate machine simulations, tool compatibility, acoustic tests or a safe limiter setting from an unsupported assumption. Keep source attribution and distinguish designer data, calculations, owner reports, live observations and unresolved checks.
 
