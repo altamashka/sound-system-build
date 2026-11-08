@@ -10,6 +10,10 @@ Use plain English and beginner-friendly steps. Alt Makers is a shared workshop/m
 
 Keep this checkout self-contained for phone/cloud use. If an original file is absent, say so rather than relying on a parent folder or old conversation. No software installation is needed just to read or edit the Markdown guides.
 
+## Research and recommendations
+
+Complete the relevant research and verification before making a recommendation or handing work back to Ben. Check decisive specifications, compatibility, processing and protection requirements, prices and growth plans against the actual project documents and reliable sources, as relevant. Do not repeatedly leave ordinary checks for Ben to do. Clearly distinguish verified facts, assumptions and unresolved questions; if a material point cannot be verified, say what was checked, explain its effect on the decision and avoid presenting the option as confirmed. Keep recommendations concise and in plain English.
+
 ## Git workflow (Claude and Codex)
 
 `main` holds the reviewed documents. Make each change on its own branch and open a pull request into `main`; do not push straight to `main`. Claude and Codex should not work on the same branch at the same time. The guides are long single files, so pull the latest `main` before editing, keep each PR to one topic or section, and rebase rather than hand-merge if two PRs touch the same guide.
