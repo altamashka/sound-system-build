@@ -17,7 +17,7 @@ The designer's layout for **two** JMODs uses two sheets of 12 mm and one sheet o
 
 ### Build it
 
-1. Get the [JMOD designer's instructions and files](https://www.jwsound.live/designs/jmod). The original cutting and 3D-print files are **not in this checkout**.
+1. Use the local `JMOD 2.0 DIY Package` folder for the designer's instructions, cutting files and 3D-print files. The package is not included in GitHub; on another device, get it from the [designer](https://www.jwsound.live/designs/jmod).
 2. Check sheet size, actual thickness, machine access and cutter suitability at Alt Makers. Review and simulate the cutting files for the actual machine, then make a test cut before cutting the sheets.
 3. Print the throat adapter in a material recommended by the designer and check that the driver fits. He reports using PETG-CF or PETG-GF with 50% infill; check that the workshop printer supports the chosen material. [Designer’s print advice](https://www.diyaudio.com/community/threads/jmod-v2-build-thread.429672/page-6) The designer says an **experimental cone filler** present in some files is not needed; this is a different part from the required throat adapter. [Designer’s clarification](https://www.diyaudio.com/community/threads/jmod-v2-build-thread.429672/page-9)
 4. Label the cut parts and dry-assemble the whole cabinet with clamps. John White emphasises that getting this first fit right matters. [Designer’s build photos](https://www.diyaudio.com/community/threads/jmod-v2-build-thread.429672/)
@@ -34,7 +34,7 @@ Budget separately for a calibrated measurement mic, signal cables, a correctly w
 
 ## 2. Next: one SKRAM
 
-If the group agrees after the first JMOD, build one SKRAM with one B&C **21DS115, 8 Ω** driver. The existing estimate is **€1,400–1,480** for its cabinet, driver and fittings, excluding amplification and the other costs above. The supplied one-cabinet cutting layout uses three sheets of 18 mm and one of 12 mm birch; alternative layouts have not been verified. Get [Josh Ricci’s SKRAM files](https://www.jwsound.live/designs/riccis-skram-subwoofer), check the actual stock and machine setup, simulate and make a test cut, then dry-fit before assembly.
+If the group agrees after the first JMOD, build one SKRAM with one B&C **21DS115, 8 Ω** driver. The existing estimate is **€1,400–1,480** for its cabinet, driver and fittings, excluding amplification and the other costs above. The supplied one-cabinet cutting layout uses three sheets of 18 mm and one of 12 mm birch; alternative layouts have not been verified. Use the local `SKRAM DIY Package` folder, or get [Josh Ricci’s SKRAM files](https://www.jwsound.live/designs/riccis-skram-subwoofer) on another device. Check the actual stock and machine setup, simulate and make a test cut, then dry-fit before assembly.
 
 ## 3. Possible next step
 

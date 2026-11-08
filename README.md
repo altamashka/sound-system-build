@@ -7,6 +7,6 @@ We are starting with **one JMOD speaker**, then plan to add **one SKRAM subwoofe
 - [Sound setup](Sound%20Setup%20Guide.md) — amplification, wiring and measurement.
 - [Workshop context](context/workshop.md) — shared Alt Makers information.
 
-The original JMOD and SKRAM design files are not included here. Download them from the designers before preparing the cutting files. Purchases, workshop access and the final amplifier choice still need to be agreed.
+The original JMOD and SKRAM packages are in the local project folder on Ben's computer, but are not included in GitHub. On another device, download them from the designers before preparing cutting files. Purchases, workshop access and the final amplifier choice still need to be agreed.
 
 For changes to these documents, follow the branch and pull-request workflow in [AGENTS.md](AGENTS.md).

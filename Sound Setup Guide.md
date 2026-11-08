@@ -30,7 +30,7 @@ The Crown XTi's published crossover menu does not offer the JMOD's 12 dB Linkwit
 4. Use a calibrated measurement microphone, its calibration file, a laptop with REW, and a suitable audio output to measure the finished speaker. A USB mic such as the UMIK-1 does not need a separate microphone interface, but the laptop still needs a way to send the test signal to the amplifier. [UMIK and REW setup](https://www.minidsp.com/applications/acoustic-measurements/umik-1-setup-with-rew/)
 5. Start at low level after the checks. Measure the JMOD, adjust with the help of the person setting it up, and save the final settings and measurements. The designer notes that results depend on the drivers, amp, processing and build.
 
-The previously inspected JMOD measurement file and printed guide differ on some mid/high EQ details. The original files are not in this checkout; obtain the current designer package and check the source before using those values. The designer does not supply a complete FB464 bi-amp preset in the published guide.
+The previously inspected JMOD measurement file and printed guide differ on some mid/high EQ details. Check the current designer package before using those values. It is in the local project folder on Ben's computer, but is not included in GitHub. The designer does not supply a complete FB464 bi-amp preset in the published guide.
 
 ## When we add a SKRAM
 
@@ -45,4 +45,4 @@ Place the sub and top as planned, then measure their combined response and adjus
 - Keep levels down while checking each channel. If there is distortion, unexpected noise or persistent limiter activity, turn down and investigate.
 - Keep a copy of the verified settings and measurement files; agree who may change them.
 
-For the designer's guidance, see [JMOD](https://www.jwsound.live/designs/jmod), [SKRAM](https://www.jwsound.live/designs/riccis-skram-subwoofer) and the [JMOD build thread](https://www.diyaudio.com/community/threads/jmod-v2-build-thread.429672/). The original designer packages are not included in this checkout.
+For the designer's guidance, see [JMOD](https://www.jwsound.live/designs/jmod), [SKRAM](https://www.jwsound.live/designs/riccis-skram-subwoofer) and the [JMOD build thread](https://www.diyaudio.com/community/threads/jmod-v2-build-thread.429672/). The original packages are in the local project folder on Ben's computer, but are not included in GitHub.

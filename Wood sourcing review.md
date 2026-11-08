@@ -12,7 +12,7 @@ Use **uncoated birch plywood**, nominally 12 mm and 18 mm, with BB/BB faces and 
 | First SKRAM | Three 18 mm sheets and one 12 mm sheet, 2500 × 1250 mm | Buy for this stage only after the layout and actual stock are checked. |
 | Later cabinets | Quantities depend on which offcuts remain and the final cutting layouts | Recalculate when the group decides to expand. |
 
-The original designer files are not in this checkout. Review and simulate the actual layouts and make a test cut before cutting full sheets. The SKRAM's supplied 12 mm layout needs the 1250 mm sheet width; a 1220 mm sheet is not a direct replacement.
+The original designer files are in the local project folder on Ben's computer, but are not included in GitHub. Review and simulate the actual layouts and make a test cut before cutting full sheets. The SKRAM's supplied 12 mm layout needs the 1250 mm sheet width; a 1220 mm sheet is not a direct replacement.
 
 ## Where to buy
 
