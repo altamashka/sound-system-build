@@ -1,4 +1,4 @@
-Working plan and budget · 6 November 2026 · For collective review
+Working plan and budget · 8 November 2026 · For collective review
 
 # Our first speaker
 
@@ -45,11 +45,19 @@ The driver prices were checked on 6 November: [12NDL88 at Thomann](https://www.t
 
 The [driver price](https://www.thomann.de/de/bc_21ds115.htm) was checked on 6 November and includes VAT. The wood uses the 23 October sheet prices above; VAT and availability are unconfirmed. Fittings and finish are older allowances. Check the cutting layout, driver and amplifier compatibility before buying.
 
-### Amplifiers: a separate decision
+### Sound and amplification
 
-The speakers need amplifiers and a sound processor before they can be played. The processor divides the sound and helps protect the drivers. The cost depends on the equipment the group chooses, so it is **not included above**.
+The first JMOD uses two amplifier channels: one for its two 12-inch drivers and one for the compression driver through a matching 16 Ω FB464 crossover. The crossover only splits the compression driver's mid and high frequencies. The amplifier's built-in processor, or a separate processor, must also divide and tune the sound between the 12-inch drivers and the compression driver. [Designer explanation](https://www.diyaudio.com/community/threads/jmod-v2-build-thread.429672/page-6)
 
-For scale only, [one Crown XTi 4002](https://www.thomann.de/de/crown_xti_4002.htm) was listed at €1,111 including VAT on 6 November. This is **not a complete system price or a recommendation**: the required channels, processing, protection and additional equipment must be checked for the chosen speakers. The existing [Sound Setup Guide](Sound%20Setup%20Guide.md) notes limitations in this amplifier’s built-in processing.
+A four-channel amplifier with suitable built-in processing could power one JMOD now and a stereo pair later. The **CVR DSP-1504 with Dante** is a candidate, not yet an agreed purchase: its processing and protection for our drivers need to be verified before we can count on it as the complete solution. An external processor may be needed. The amplifier, cables, measurement microphone and setup costs are extra to the speaker estimate above.
+
+When we add a SKRAM, it will need an amplifier channel of its own and suitable processing. Once both JMODs use all four channels, the SKRAM will need another amplifier. Different brands can work together.
+
+### Details from the designer's build thread
+
+- The 3D-printed throat adapter is required. A separate experimental cone-filler model shown in some release files is **not required**, according to the designer; do not confuse the two. [Designer reply](https://www.diyaudio.com/community/threads/jmod-v2-build-thread.429672/page-9)
+- Dry-fit the cabinet before gluing; the designer highlights the first assembly as important for the parts fitting together. [Build photos and advice](https://www.diyaudio.com/community/threads/jmod-v2-build-thread.429672/)
+- The designer recommends a rack patch panel or suitable breakout to carry both amplifier channels to each JMOD's four-pole speaker cable. Include this in the cable budget and verify the wiring before power. [Designer explanation](https://www.diyaudio.com/community/threads/jmod-v2-build-thread.429672/page-6)
 
 ## What we do next
 
@@ -58,7 +66,7 @@ For scale only, [one Crown XTi 4002](https://www.thomann.de/de/crown_xti_4002.ht
 3. **Get the JMOD designer files**, which are not in this GitHub copy. Check the cutting layout for one cabinet.
 4. **Check Alt Makers access:** training, machine and storage costs, tools and space for assembly. Confirm current wood specification, price and VAT.
 5. **Refresh the shopping list** in [Build Guide B3](Build%20Guide.md#b3-bill-of-materials). Its quantities are for two cabinets. Bring the updated total to the group before ordering.
-6. **Review and simulate the cutting files, then make a test cut** before cutting full sheets. The earlier review read the files but did not simulate or cut them. See [Build Guide B5](Build%20Guide.md#b5-cam-review).
+6. **Review and simulate the cutting files, then make a test cut** before cutting full sheets. See [Build Guide B5](Build%20Guide.md#b5-cam-review).
 
 Then build the cabinet using [Build Guide B](Build%20Guide.md#b--jmod-build) and record the actual cost and time. Before playing it, have an experienced person check the wiring, equipment and protective settings; a calculated setting alone is not proof of safety.
 
