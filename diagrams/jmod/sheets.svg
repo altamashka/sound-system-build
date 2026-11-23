@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="429" viewBox="0 0 760 429" role="img" aria-labelledby="title desc">
+  <title id="title">Plywood and part counts for two JMODs</title>
+  <desc id="desc">Sheet one: four top or bottom panels, four sides, four handle braces and two L braces. Sheet two: two rear frames, four access panels, two spines and four D braces nested in the rear frames. The 18 mm sheet holds eight outer flares and two connected groups of four inner flares.</desc>
+  <rect width="760" height="429" rx="16" fill="#f5f3ea"/>
+  <g transform="translate(22 20)" font-family="system-ui, sans-serif">
+    <g fill="#fffdf7" stroke="#d5d8cb" stroke-width="1.5">
+      <rect width="228" height="363" rx="12"/><rect x="244" width="228" height="363" rx="12"/><rect x="488" width="228" height="363" rx="12"/>
+    </g>
+    <g text-anchor="middle" fill="#28483e" font-size="21" font-weight="700">
+      <text x="114" y="38">12 mm · Sheet 1</text><text x="358" y="38">12 mm · Sheet 2</text><text x="602" y="38">18 mm · Sheet 3</text>
+    </g>
+    <g fill="#f3ead6" stroke="#a89169" stroke-width="1.5">
+      <rect x="61" y="54" width="106" height="212" rx="2"/>
+      <rect x="305" y="54" width="106" height="212" rx="2"/>
+      <rect x="549" y="54" width="106" height="212" rx="2"/>
+    </g>
+    <g fill="#e2bd84" stroke="#836445" stroke-width="1.3">
+      <path d="M68 148h52v22H68zm0 25h52v22H68zm0 25h52v22H68zm0 25h52v22H68z"/>
+      <path d="M125 126h34v26h-34zm0 31h34v26h-34zm0 31h34v26h-34zm0 31h34v26h-34z"/>
+      <path d="M75 109h5v-6h8v6h5v7h-5v6h-8v-6h-5zm23 0h5v-6h8v6h5v7h-5v6h-8v-6h-5zm23 0h5v-6h8v6h5v7h-5v6h-8v-6h-5zm23 0h5v-6h8v6h5v7h-5v6h-8v-6h-5z"/>
+      <path d="M72 137v-11h4v7h7v4zm19 0v-11h4v7h7v4z"/>
+      <path d="M311 177h53v31h-53zm0 38h53v31h-53z" fill="#d5ad73"/>
+      <path d="M370 153h34v20h-34zm0 24h34v20h-34zm0 24h34v20h-34zm0 24h34v20h-34z"/>
+      <path d="M314 159h45v5h-45zm0 8h45v5h-45z"/>
+      <path d="M555 139h8v42h-8zm12 0h8v42h-8zm12 0h8v42h-8zm12 0h8v42h-8z"/>
+      <path d="M608 128h8v53h-8zm11 0h8v53h-8zm11 0h8v53h-8zm11 0h8v53h-8z"/>
+    </g>
+    <g fill="#fff9eb" stroke="#8a6a4b" stroke-width="1.2">
+      <rect x="130" y="134" width="24" height="10" rx="2"/><rect x="130" y="165" width="24" height="10" rx="2"/>
+      <rect x="130" y="196" width="24" height="10" rx="2"/><rect x="130" y="227" width="24" height="10" rx="2"/>
+      <rect x="316" y="182" width="18" height="21" rx="2"/><rect x="340" y="182" width="18" height="21" rx="2"/>
+      <rect x="316" y="220" width="18" height="21" rx="2"/><rect x="340" y="220" width="18" height="21" rx="2"/>
+    </g>
+    <g fill="#728c76">
+      <path d="M319 196l4-9h7v9zm24 0l4-9h7v9zm-24 38l4-9h7v9zm24 0l4-9h7v9z"/>
+      <rect x="555" y="189" width="47" height="64" rx="3"/><rect x="606" y="199" width="43" height="54" rx="3"/>
+    </g>
+    <g text-anchor="middle" fill="#fff" font-size="13" font-weight="700">
+      <text x="578" y="225">LR</text><text x="627" y="231">UL</text>
+    </g>
+    <g fill="#28483e" font-size="17">
+      <text x="20" y="290">4 tops/bottoms · 4 sides</text>
+      <text x="20" y="315">4 handle braces</text>
+      <text x="20" y="340">2 L braces</text>
+      <text x="264" y="290">2 frames · 4 access panels</text>
+      <text x="264" y="315">2 spines · 4 D braces</text>
+      <text x="264" y="340" fill="#4c5c52" font-size="15">D braces sit inside frames</text>
+      <text x="508" y="290">8 outer flares</text>
+      <text x="508" y="315">4 inner left/right flares</text>
+      <text x="508" y="340">4 inner upper/lower flares</text>
+    </g>
+  </g>
+  <text x="380" y="410" text-anchor="middle" fill="#4c5c52" font-family="system-ui, sans-serif" font-size="15">Schematic only. Use the Fusion stock and paths for the layout.</text>
+</svg>
