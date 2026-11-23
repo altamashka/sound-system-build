@@ -17,6 +17,8 @@ The designer's layout for **two** JMODs uses two sheets of 12 mm and one sheet o
 
 ### Build it
 
+The [JMOD fabrication guide](JMOD%20Fabrication%20Guide.md) walks through the designer’s three-sheet CNC layout for two cabinets at Alt Makers. Use it to plan a shared cutting run while the group decides how many cabinets to finish and equip in the first stage.
+
 1. Use the local `JMOD 2.0 DIY Package` folder for the designer's instructions, cutting files and 3D-print files. The package is not included in GitHub; on another device, get it from the [designer](https://www.jwsound.live/designs/jmod).
 2. Check sheet size, actual thickness, machine access and cutter suitability at Alt Makers. Review and simulate the cutting files for the actual machine, then make a test cut before cutting the sheets.
 3. Print the throat adapter in a material recommended by the designer and check that the driver fits. He reports using PETG-CF or PETG-GF with 50% infill; check that the workshop printer supports the chosen material. [Designer’s print advice](https://www.diyaudio.com/community/threads/jmod-v2-build-thread.429672/page-6) The designer says an **experimental cone filler** present in some files is not needed; this is a different part from the required throat adapter. [Designer’s clarification](https://www.diyaudio.com/community/threads/jmod-v2-build-thread.429672/page-9)

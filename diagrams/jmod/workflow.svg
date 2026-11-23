@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="226" viewBox="0 0 760 226" role="img" aria-labelledby="title desc">
+  <title id="title">From plans to two JMOD kits</title>
+  <desc id="desc">Four steps: read the plans and measure stock, check paths in Fusion, prove the cuts on scrap, then label the parts for the two cabinets.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0 0l7 3.5-7 3.5z" fill="#52655a"/>
+    </marker>
+  </defs>
+  <rect width="760" height="226" rx="16" fill="#f5f3ea"/>
+  <g fill="#fffdf7" stroke="#d5d8cb" stroke-width="1.5">
+    <rect x="22" y="22" width="155" height="182" rx="12"/>
+    <rect x="209" y="22" width="155" height="182" rx="12"/>
+    <rect x="396" y="22" width="155" height="182" rx="12"/>
+    <rect x="583" y="22" width="155" height="182" rx="12"/>
+  </g>
+  <g fill="none" stroke="#52655a" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M183 94h19"/><path d="M370 94h19"/><path d="M557 94h19"/>
+  </g>
+  <g fill="none" stroke="#345e4f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M73 58h36l13 13v47H73z" fill="#e0ebe0"/>
+    <path d="M109 58v13h13M83 83h28m-28 10h28m-28 10h15"/>
+    <path d="M251 63h70v47h-70z" fill="#e0ebe0"/>
+    <path d="M258 98l16-18 12 11 20-15m-32 43h24m-12-9v9"/>
+    <path d="M440 98h68v19h-68z" fill="#e7c895"/>
+    <path d="M451 98v8h16v-8m24 0v8h8v-8"/>
+    <path d="M470 56h8v34l-4 5-4-5z" fill="#e0ebe0"/>
+    <path d="M626 70h29v47h-29zM666 70h29v47h-29z" fill="#e7c895"/>
+  </g>
+  <g fill="#28483e" text-anchor="middle" font-family="system-ui, sans-serif">
+    <g font-size="18" font-weight="700">
+      <text x="99.5" y="147">Plans &amp; wood</text>
+      <text x="286.5" y="147">Fusion</text>
+      <text x="473.5" y="147">Test on scrap</text>
+      <text x="660.5" y="147">Cut both kits</text>
+    </g>
+    <g font-size="14" fill="#4c5c52">
+      <text x="99.5" y="171">Measure three sheets</text>
+      <text x="286.5" y="171">Check all six setups</text>
+      <text x="473.5" y="171">Check the fit and flip</text>
+      <text x="660.5" y="171">Label parts A and B</text>
+      <text x="640.5" y="99" font-weight="700">A</text><text x="680.5" y="99" font-weight="700">B</text>
+    </g>
+  </g>
+</svg>
