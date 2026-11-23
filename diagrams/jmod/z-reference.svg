@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="301" viewBox="0 0 760 301" role="img" aria-labelledby="title desc">
+  <title id="title">One pocket with two Z references</title>
+  <desc id="desc">On the left, the stock top is Z zero and the pocket floor is Z minus 5 millimetres. On the right, the spoilboard is Z zero and the same pocket floor is Z plus 7 millimetres. The stock is 12 millimetres thick and sits directly on the bed in both cases.</desc>
+  <rect width="760" height="301" rx="16" fill="#f5f3ea"/>
+  <g font-family="system-ui, sans-serif">
+    <g fill="#fffdf7" stroke="#d5d8cb" stroke-width="1.5">
+      <rect x="22" y="20" width="350" height="226" rx="12"/>
+      <rect x="388" y="20" width="350" height="226" rx="12"/>
+    </g>
+    <g fill="#28483e" font-size="21" font-weight="700">
+      <text x="43" y="53">Z zero at stock top</text>
+      <text x="409" y="53">Z zero at spoilboard</text>
+    </g>
+    <g transform="translate(43 98)">
+      <path d="M0 0h54v30h62V0h54v72H0z" fill="#e2bd84" stroke="#836445" stroke-width="1.5"/>
+      <path d="M0 72h170v23H0z" fill="#d8dfd4" stroke="#708376" stroke-width="1.5"/>
+      <path d="M0 0h182M54 30h128M0 72h182" fill="none" stroke="#345e4f" stroke-width="1.2" stroke-dasharray="4 4"/>
+      <circle cx="0" cy="0" r="4" fill="#345e4f"/>
+    </g>
+    <g transform="translate(409 98)">
+      <path d="M0 0h54v30h62V0h54v72H0z" fill="#e2bd84" stroke="#836445" stroke-width="1.5"/>
+      <path d="M0 72h170v23H0z" fill="#d8dfd4" stroke="#708376" stroke-width="1.5"/>
+      <path d="M0 0h182M54 30h128M0 72h182" fill="none" stroke="#345e4f" stroke-width="1.2" stroke-dasharray="4 4"/>
+      <circle cx="0" cy="72" r="4" fill="#345e4f"/>
+    </g>
+    <g fill="#28483e" font-size="16">
+      <text x="230" y="104" font-weight="700">Z 0 · sheet top</text>
+      <text x="230" y="134">Z −5 · pocket floor</text>
+      <text x="230" y="176">Z −12 · bed</text>
+      <text x="596" y="104">Z +12 · sheet top</text>
+      <text x="596" y="134">Z +7 · pocket floor</text>
+      <text x="596" y="176" font-weight="700">Z 0 · bed</text>
+    </g>
+    <g fill="#4c5c52" font-size="15">
+      <text x="43" y="222">Reference in the saved Fusion setup</text>
+      <text x="409" y="222">Example with plywood flat on the bed</text>
+      <text x="380" y="277" text-anchor="middle">Same pocket. Use the value that matches the measured machine reference.</text>
+    </g>
+  </g>
+</svg>
