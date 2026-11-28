@@ -1,5 +1,5 @@
-from pathlib import Path
 import time
+from pathlib import Path
 
 import adsk.cam
 import adsk.core
@@ -74,7 +74,6 @@ def build_combined_job(doc):
         raise RuntimeError('Fusion did not persist the new sheet bodies.')
     stock.isLightBulbOn = False
 
-
     # Keep the designer's flare models, tool selections and reverse stock.
     jmod.stockSolids = collect([stock, *remaining_stocks])
     setup_input = cam.setups.createInput(adsk.cam.OperationTypes.MillingOperation)
@@ -98,7 +97,7 @@ def build_combined_job(doc):
 
         if any(abs(a - b) > 1e-4 for a, b in zip(actual, expected_wcs)):
             raise RuntimeError(f'{setup.name}: unexpected datum {actual}')
-        if any(abs(a - b) > 1e-6 for a, b in zip(axes, [1,0, 0, 0, 1, 0, 0, 0, 1])):
+        if any(abs(a - b) > 1e-6 for a, b in zip(axes, [1, 0, 0, 0, 1, 0, 0, 0, 1])):
             raise RuntimeError(f'{setup.name}: work axes differ from the Fab axes')
 
     add_classix_profile(jmod, classix)
@@ -167,10 +166,24 @@ def run(_context):
     if dialog.showOpen() != adsk.core.DialogResults.DialogOK:
         return
     source = Path(dialog.filename)
+
+    destination_dialog = app.userInterface.createFileDialog()
+    destination_dialog.title = 'Save a local copy of the nominal Fusion CAM'
+    destination_dialog.filter = 'Fusion archive (*.f3d)'
+    destination_dialog.initialDirectory = str(source.parent)
+    destination_dialog.initialFilename = 'Classix III + JMOD - Fab CAM nominal.f3d'
+    if destination_dialog.showSave() != adsk.core.DialogResults.DialogOK:
+        return
+    destination = Path(destination_dialog.filename)
+    if destination.suffix.lower() != '.f3d':
+        destination = destination.with_name(destination.name + '.f3d')
+    if destination.exists():
+        app.userInterface.messageBox('Choose a new filename to keep the existing archive.')
+        return
+
     manager = app.importManager
     doc = manager.importToNewDocument(manager.createFusionArchiveImportOptions(str(source)))
     design = build_combined_job(doc)
-    destination = source.with_name('Classix III + JMOD - Fab CAM nominal.f3d')
     save_nominal_archive(design, destination)
     app.userInterface.messageBox(
         f'Saved nominal CAM to {destination}. Verify the measured stock, fixture and cutter before posting.'
