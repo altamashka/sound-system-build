@@ -1,0 +1,12 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "author": "Sound system build",
+  "description": {
+    "": "Prepare the combined 18 mm sheet from the local JMOD Fab CAM archive."
+  },
+  "version": "1.0.0",
+  "runOnStartup": false,
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}
